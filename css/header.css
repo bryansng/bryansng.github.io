@@ -65,15 +65,15 @@
 	transition-duration: 0.2s;
 	transition-delay: 0s;
 	
-	border-color: transparent;
-	border-style: solid;
-	border-width: 3px;
+	border-bottom-color: transparent;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
 }
 
 .tabs_container a:hover{
-	border-color: white;
-	border-style: solid;
-	border-width: 3px;
+	border-bottom-color: white;
+	
+	box-shadow: 0px 0px 25px 2px #EEEEEE inset;
 }
 
 
