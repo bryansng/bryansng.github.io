@@ -49,28 +49,16 @@
 }
 
 .gallery_img{
+	/* 3:2 */
 	width: 360px;
 	height: 240px;
+	background-color: #EEEEEE;
 }
 
 .horizontal{
-	/* 3:2 */
-	width: 360px;
-	height: 240px;
-	
-	background-color: #EEEEEE;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	object-fit: cover;
 }
 
 .vertical{
-	/* 3:2 */
-	width: 360px;
-	height: 240px;
-	
-	background-color: #EEEEEE;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
+	object-fit: contain;
 }
