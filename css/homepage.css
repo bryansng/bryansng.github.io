@@ -1,0 +1,89 @@
+/*
+body, html{
+	height: 100%;
+}
+*/
+/* Change bg_img's height attri to 100%, to use the above */
+
+.bg_img{
+	position: relative;
+	height: 100vh;
+	
+	/*background-image: url("../img/bg_bright_compressed.JPG");*/
+	background-image: url("../img/bg_dark_compressed.JPG");
+	/*background-position: center;*/
+	background-position: 0% 100%;		/* x and y, for shifting image. */
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.8;
+	/*background-attachment: fixed;*/	/* Used for parallax effect. */
+	
+	vertical-align: middle;
+	
+	outline: none;
+	border: none;
+}
+
+.content_container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	background-color: rgba(255, 255, 255, 0.4);	/* Last argument adjusts transparency */
+	
+	padding: 2em;
+	
+	text-align: center;
+	font-size: 2.5vh;
+}
+
+.name_container p{
+	text-transform: uppercase;
+	font-family: 'Bree Serif', serif;
+	font-size: 12vh;
+}
+
+.name_bold{
+	font-size: 14vh;
+}
+
+.main_nav_container{
+	font-family: 'logoBold';
+	
+	padding-top: 10px;
+	cursor: default;
+	
+	white-space: nowrap;
+}
+
+.main_nav_container a{
+	color: black;
+	cursor: pointer;
+}
+
+.main_nav_container a:hover{
+	opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Include fonts */
+@font-face{
+	font-family: 'logoBold';
+	src: url('../fonts/Moon_Bold.otf');
+}
+
+@font-face{
+	font-family: 'logoLight';
+	src: url('../fonts/Moon_Light.otf');
+}

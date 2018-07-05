@@ -1,0 +1,42 @@
+<div class="footer_container">
+	<div class="sm_container">
+		<div class="sm_svg" style="order: 1;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+				<a href="https://www.instagram.com/" target="_blank" class="a_remove_deco">
+					{% include svg/footer/instagram.html %}
+				</a>
+			</svg>
+		</div>
+		<div class="sm_svg" style="order: 2;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+				<a href="https://www.facebook.com/" target="_blank" class="a_remove_deco">
+					{% include svg/footer/facebook.html %}
+				</a>
+			</svg>
+		</div>
+		<div class="sm_svg" style="order: 3;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+				<a href="https://www.youtube.com/" target="_blank" class="a_remove_deco">
+					{% include svg/footer/youtube.html %}
+				</a>
+			</svg>
+		</div>
+		<div class="sm_svg" style="order: 4;">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+				<a href="https://twitter.com/" target="_blank" class="a_remove_deco">
+					{% include svg/footer/twitter.html %}
+				</a>
+			</svg>
+		</div>
+	</div>
+	<div class="copy_container">
+		&copy;&nbsp;<span id="year">2018</span>&nbsp;Bryan Sng.
+		&nbsp;|&nbsp;
+		V1.0
+	</div>
+</div>
+
+<script>
+	var d = new Date();
+	document.getElementById("year").innerHTML = d.getFullYear();
+</script>

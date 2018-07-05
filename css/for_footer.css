@@ -1,0 +1,32 @@
+.footer_container{
+	width: 100%;
+	
+	position: absolute;
+	bottom: 0px;
+	
+	/* Misc */
+	z-index: 1;
+	background-color: transparent;
+	overflow: hidden;
+	
+	/* Hidden in main page. */
+	opacity: 0;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+}
+
+.footer_container:hover{
+	opacity: 1;
+}
+
+.sm_container{
+	padding-top: 0.5vw;
+}
+
+.sm_svg{
+	width: 3vw;
+}
+
+.copy_container{
+	padding-bottom: 5px;
+}

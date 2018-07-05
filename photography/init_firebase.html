@@ -1,0 +1,22 @@
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+<script>
+	// Initialize Firebase
+	var config = {
+	apiKey: "AIzaSyALABloSy_HEdQLTtZilGSgXiMTqMhnkR8",
+	authDomain: "personal-85bs.firebaseapp.com",
+	databaseURL: "https://personal-85bs.firebaseio.com",
+	projectId: "personal-85bs",
+	storageBucket: "personal-85bs.appspot.com",
+	messagingSenderId: "202949864657"
+	};
+	firebase.initializeApp(config);
+	
+	// Initialize Cloud Firestore through Firebase
+	var db = firebase.firestore();
+</script>
+
+<script>
+	const firebase = require("firebase");
+	// Required for side-effects
+	require("firebase/firestore");
+</script>

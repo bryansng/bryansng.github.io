@@ -1,0 +1,76 @@
+.intro_container{
+	width: 100%;
+}
+
+.intro_img{
+	position: relative;
+	
+	height: 100vh;
+	
+	/*background-image: url("../img/bg_1.JPG");*/
+	background-image: url("../img/bg_2.JPG");
+	/*background-position: center;*/
+	background-position: 0% 10%;		/* x and y, for shifting image. */
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	/*background-attachment: fixed;*/	/* Used for parallax effect. */
+}
+
+.intro_content{
+	position: absolute;
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+
+
+
+
+
+.gallery_container{
+	width: 100%;
+	
+	padding: 5vw;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* OR flex-flow: row wrap; */
+	
+	justify-content: center;
+}
+
+.gallery_wrapper{
+	/* Maintains gallery symmetry */
+	padding: 0.5vw;
+}
+
+.gallery_img{
+	width: 360px;
+	height: 240px;
+}
+
+.horizontal{
+	/* 3:2 */
+	width: 360px;
+	height: 240px;
+	
+	background-color: #EEEEEE;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.vertical{
+	/* 3:2 */
+	width: 360px;
+	height: 240px;
+	
+	background-color: #EEEEEE;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}

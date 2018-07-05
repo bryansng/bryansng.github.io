@@ -1,0 +1,108 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="css/photography.css"/>
+		<link rel="stylesheet" type="text/css" href="css/for_header.css"/>
+	</head>
+	
+	<body>
+		{% include header.html %}
+		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_img"></div>
+			<div class="intro_content">
+				<h1>
+					Lorem Ipsum Yaya tita
+				</h1>
+				<p>
+					Some text to fill the gap
+				</p>
+			</div>
+		</div>
+		
+		<!-- Grids -->
+		<div class="gallery_container">
+			<div class="gallery_wrapper" style="order: 1;">
+				<div class="gallery_img" style="background-image: url('img/t1.jpg');"></div>
+			</div>
+			<div class="gallery_wrapper" style="order: 2;">
+				<div class="gallery_img" style="background-image: url('img/t2.jpg');"></div>
+			</div>
+			<div class="gallery_wrapper" style="order: 3;">
+				<div class="gallery_img" style="background-image: url('img/t3.jpg');"></div>
+			</div>
+			<div class="gallery_wrapper" style="order: 4;">
+				<div class="gallery_img" style="background-image: url('img/t4.jpg');"></div>
+			</div>
+			<div class="gallery_wrapper" style="order: 5;">
+				<div class="gallery_img" style="background-image: url('img/t5.jpg');"></div>
+			</div>
+			<div class="gallery_wrapper" style="order: 6;">
+				<div class="gallery_img" style="background-image: url('img/t6.jpg');"></div>
+			</div>
+		</div>
+		
+		<script>
+			/*
+			// Image counter.
+			var imgs = document.images,
+				len = imgs.length,
+				counter = 0;
+
+			[].forEach.call( imgs, function( img ) {
+				img.addEventListener( 'load', incrementCounter, false );
+			} );
+
+			function incrementCounter() {
+				counter++;
+				if ( counter === len ) {
+					jScript();
+				}
+			}
+			
+			// Execute this script when windows done loading.
+			function jScript(){
+				var imgs = document.getElementsByClassName("gallery_img");
+				console.log(imgs);
+				
+				for (var i = 0; i < imgs.length; i++){
+					console.log(imgs[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0]);
+					console.log(i);
+					console.log(imgs[i]);
+					
+					var imageSrc = imgs[i].style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
+					
+					var image = new Image();
+					image.src = imageSrc;
+					image.onload = function(){
+						console.log(image);
+						console.log(image.width);
+						console.log(image.height);
+						
+						var width = image.width;
+						var height = image.height;
+						
+						if (width > height){
+							imgs[i].classList.add("horizontal");
+						}
+						else if (height > width){
+							imgs[i].classList.add("vertical");
+						}
+				}
+			}
+			window.onload = jScript;
+			*/
+		</script>
+		
+		{% include footer.html %}
+		
+		{% include_relative init_firebase.html %}
+	</body>
+	
+</html>
