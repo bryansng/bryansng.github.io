@@ -1,0 +1,148 @@
+.intro_container{
+	width: 100%;
+}
+
+.intro_img{
+	position: relative;
+	
+	height: 100vh;
+	
+	background-image: url("../img/grip_1.jpg");
+	/*background-position: center;*/
+	background-position: 0% 80%;		/* x and y, for shifting image. */
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	/*background-attachment: fixed;*/	/* Used for parallax effect. */
+	
+	background-color: gray;
+	background-blend-mode: overlay;
+}
+
+.intro_content{
+	position: absolute;
+	
+	text-align: center;
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.intro_content p{
+	font-size: 2vw;
+	
+	font-style: italic;
+	/*
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Bree Serif', serif;
+	font-family: 'Noto Serif', serif;
+	font-family: 'Moon_Bold';
+	font-family: 'Moon_Light';
+	font-family: 'Baufra_SemiBold';
+	font-family: 'Helvetica';
+	*/
+}
+
+.intro_content h1{
+	padding-top: 2vw;
+	
+	font-size: 5vw;
+	text-transform: uppercase;
+	
+	font-weight: 1000;
+	
+	font-family: 'Helvetica';
+}
+
+
+
+
+
+
+
+/* Level Zero */
+.outer_flex{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+/* Level One, all three divs in L1. */
+.container{
+	width: 100%;	/* Omitted = Content cluttered in the center. */
+	padding-bottom: 8vw;
+}
+
+/* Level One, First div and last div. */
+.resume .container:first-child{
+	padding-top: 3vw;
+}
+.resume .container:last-child{
+	padding-bottom: 3vw;
+}
+
+/* Level Two, Technologies wrapper, for inner flexbox. */
+.middle_flex{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	
+	justify-content: space-around;
+	align-content: center;
+}
+
+/* Level Three, Technologies headers and lists. */
+.header_2{
+	padding-bottom: 0.5vw;
+	color: rgba(26, 26, 26, 0.75);
+	text-transform: uppercase;
+}
+.wrapper ul{
+	list-style-type: disc;
+	
+	padding-left: 3vw;
+}
+
+/* Level Three, headers for techonlogies, work_exp & edu. */
+.header_1{
+	color: grey;
+	text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Include fonts */
+@font-face{
+	font-family: 'Moon_Bold';
+	src: url('../../fonts/Moon_Bold.otf');
+}
+
+@font-face{
+	font-family: 'Moon_Light';
+	src: url('../../fonts/Moon_Light.otf');
+}
+
+@font-face{
+	font-family: 'Baufra_SemiBold';
+	src: url('../../fonts/Baufra_SemiBold.otf');
+}
+
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../../fonts/Helvetica.ttf');
+}s
