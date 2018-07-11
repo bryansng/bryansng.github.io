@@ -50,14 +50,14 @@
 	position: absolute;
 	transform: translate(24%, 63%);
 	
-	font-family: 'logoBold';
+	font-family: 'Moon_Bold';
 	font-size: 20px;
 }
 
 .tabs_container a{
 	padding: 0.8vw 2.58vw;
 	
-	font-family: 'logoLight';
+	font-family: 'Moon_Light';
 	color: black;
 	
 	transition-property: all;
@@ -71,8 +71,6 @@
 }
 
 .tabs_container a:hover{
-	border-bottom-color: white;
-	
 	box-shadow: 0px 0px 25px 2px #EEEEEE inset;
 }
 
@@ -92,11 +90,21 @@
 
 /* Include fonts */
 @font-face{
-	font-family: 'logoBold';
+	font-family: 'Moon_Bold';
 	src: url('../fonts/Moon_Bold.otf');
 }
 
 @font-face{
-	font-family: 'logoLight';
+	font-family: 'Moon_Light';
 	src: url('../fonts/Moon_Light.otf');
+}
+
+@font-face{
+	font-family: 'Baufra_SemiBold';
+	src: url('../../fonts/Baufra_SemiBold.otf');
+}
+
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../../fonts/Helvetica.ttf');
 }

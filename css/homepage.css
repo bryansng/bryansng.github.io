@@ -32,29 +32,37 @@ body, html{
 	
 	background-color: rgba(255, 255, 255, 0.4);	/* Last argument adjusts transparency */
 	
-	padding: 2em;
+	padding: 1em;
 	
 	text-align: center;
 	font-size: 2.5vh;
 }
 
-.name_container p{
+.name_container h1{
 	text-transform: uppercase;
-	font-family: 'Bree Serif', serif;
-	font-size: 12vh;
+	font-family: 'Merriweather', serif;
+	font-size: 6vw;
 }
 
 .name_bold{
-	font-size: 14vh;
+	font-size: 7vw;
 }
 
 .main_nav_container{
-	font-family: 'logoBold';
+	font-family: 'Moon_Bold';
 	
 	padding-top: 10px;
 	cursor: default;
 	
 	white-space: nowrap;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
 .main_nav_container a{
@@ -79,11 +87,11 @@ body, html{
 
 /* Include fonts */
 @font-face{
-	font-family: 'logoBold';
-	src: url('../fonts/Moon_Bold.otf');
+	font-family: 'Moon_Bold';
+	src: url('../../fonts/Moon_Bold.otf');
 }
 
 @font-face{
-	font-family: 'logoLight';
-	src: url('../fonts/Moon_Light.otf');
+	font-family: 'Moon_Light';
+	src: url('../../fonts/Moon_Light.otf');
 }
