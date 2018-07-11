@@ -1,0 +1,165 @@
+.intro_container{
+	width: 100%;
+}
+
+.intro_img{
+	position: relative;
+	
+	height: 100vh;
+	
+	background-image: url("../img/flow_1.jpg");
+	/*background-position: center;*/
+	background-position: 0% 10%;		/* x and y, for shifting image. */
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	/*background-attachment: fixed;*/	/* Used for parallax effect. */
+}
+
+.intro_content{
+	position: absolute;
+	
+	text-align: center;
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.intro_content p{
+	font-size: 2vw;
+	
+	font-style: italic;
+	/*
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Bree Serif', serif;
+	font-family: 'Noto Serif', serif;
+	font-family: 'Moon_Bold';
+	font-family: 'Moon_Light';
+	font-family: 'Baufra_SemiBold';
+	font-family: 'Helvetica';
+	*/
+}
+
+.intro_content h1{
+	padding-top: 2vw;
+	
+	font-size: 5vw;
+	text-transform: uppercase;
+	
+	font-weight: 1000;
+	
+	font-family: 'Helvetica';
+}
+
+
+
+
+.transition{
+	width: 100%;
+	background-color: #EAEAEA;
+	box-shadow: 0 0 150px 40px #E2E2E2;
+	padding-top: 1%;
+	margin-bottom: 2%;
+}
+
+.footer_transition_container{
+	margin-top: 2%;
+	padding-bottom: 4%;
+	background-color: #EAEAEA;
+	box-shadow: 0 0 150px 25px #E2E2E2;
+}
+
+
+
+
+
+.content_container{
+	width: 100%;
+	
+	padding: 3.2vw 5vw;
+}
+
+.quotes_container{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	
+	margin: 0vw 5vw;
+	box-shadow: 0px 0px 8vw 1vw #EAEAEA;
+}
+
+.quotes_container .quote_container:first-child{
+	padding-top: 5vw;
+}
+
+.quotes_container .quote_container:last-child{
+	padding-bottom: 5vw;
+}
+
+.quote_container{
+	text-align: center;
+	font-size: 1.289vw;
+	
+	padding-bottom: 10vw;
+}
+
+.quote_container cite, .quote_container blockquote{
+	font-style: italic;
+}
+
+.quote_date{
+	padding-bottom: 1.25vw;
+	color: lightgray;
+}
+
+.quote{
+	/*font-family: 'Helvetica';*/
+	/*font-size: 1.289vw;*/
+	font-size: 1.5vw;
+	padding-bottom: 0.75vw;
+}
+
+.quote:before{
+	content: "\201C  ";
+	font-style: italic;
+	font-size: 1.6vw;
+}
+
+.quote:after{
+	content: "\201D";
+	font-style: italic;
+	font-size: 1.6vw;
+}
+
+
+
+
+
+
+/* Include fonts */
+@font-face{
+	font-family: 'Moon_Bold';
+	src: url('../../fonts/Moon_Bold.otf');
+}
+
+@font-face{
+	font-family: 'Moon_Light';
+	src: url('../../fonts/Moon_Light.otf');
+}
+
+@font-face{
+	font-family: 'Baufra_SemiBold';
+	src: url('../../fonts/Baufra_SemiBold.otf');
+}
+
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../../fonts/Helvetica.ttf');
+}

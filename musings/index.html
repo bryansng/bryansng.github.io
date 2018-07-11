@@ -4,35 +4,101 @@
 <html lang="en">
 	
 	<head>
+		{% include_relative js/init_firebase.html %}
+		
 		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="css/musings.css"/>
+		<link rel="stylesheet" type="text/css" href="css/for_header.css"/>
 	</head>
 	
 	<body>
 		{% include header.html %}
 		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_img"></div>
+			<div class="intro_content">
+				<p>Quotes that I live by</p>
+				<h1>Musings</h1>
+			</div>
+		</div>
+		
+		<div class="transition"></div>
+		
+		<div class="content_container">
+			<div class="quotes_container" id="parent"></div>
+		</div>
+		
 		{% include footer.html %}
 		
-		<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
 		<script>
-			// Initialize Firebase
-			var config = {
-			apiKey: "AIzaSyALABloSy_HEdQLTtZilGSgXiMTqMhnkR8",
-			authDomain: "personal-85bs.firebaseapp.com",
-			databaseURL: "https://personal-85bs.firebaseio.com",
-			projectId: "personal-85bs",
-			storageBucket: "personal-85bs.appspot.com",
-			messagingSenderId: "202949864657"
-			};
-			firebase.initializeApp(config);
-			
-			// Initialize Cloud Firestore through Firebase
+			// Initialize Cloud Firestore through Firebase.
 			var db = firebase.firestore();
+			
+			var parent = document.getElementById("parent"); // get parent.
+			
+			db.collection("musings").orderBy("order").get().then((querySnapshot) => {
+				querySnapshot.forEach((doc) => {
+					data = doc.data();
+					
+					var new_div = document.createElement("div");
+					var new_date = document.createElement("div");
+					var new_quote = document.createElement("blockquote");
+					var new_author_p = document.createElement("p");
+					var new_author_cite = document.createElement("cite");
+					
+					// Create a string formatted time for the date.
+					var date = new Date(data["time_uploaded"] * 1000);	// In milliseconds.
+					var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+					var month = months[date.getMonth()];
+					var year = date.getFullYear();
+					var day = date.getDate();
+					if (date.getDate() < 10){	// Looks neater when printed.
+						day = '0' + day;
+					}
+					var formattedTime = month + " " + day + ", " + year;
+					
+					new_date.innerHTML = formattedTime;
+					new_quote.innerHTML = data["quote"];
+					new_author_cite.innerHTML =  "- " + data["author"];
+					
+					new_date.classList.add("quote_date");
+					new_div.classList.add("quote_container");
+					new_quote.classList.add("quote");
+					
+					new_div.append(new_date);
+					new_div.append(new_quote);
+					new_author_p.append(new_author_cite);
+					new_div.append(new_author_p);
+					
+					parent.insertBefore(new_div, parent.childNodes[0]); // insert into first node.
+				});
+			});
 		</script>
 		
 		<script>
-			const firebase = require("firebase");
-			// Required for side-effects
-			require("firebase/firestore");
+			/*
+			// Initialize Cloud Firestore through Firebase.
+			var db = firebase.firestore();
+			
+			var d = new Date();
+			var timestamp = d.getTime();
+			
+			// Add a new document in a collection.
+			db.collection("musings").add({
+				quote: "Hello",
+				author: "Bryan",
+				order: 1,
+				time_uploaded: timestamp
+			})
+			.then(function(docRef){
+				console.log("Document written with ID: ", docRef.id);
+			})
+			.catch(function(error){
+				console.error("Error adding document: ", error);
+			});
+			*/
 		</script>
 	</body>
 	
