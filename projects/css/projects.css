@@ -19,10 +19,41 @@
 .intro_content{
 	position: absolute;
 	
+	text-align: center;
+	
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%)
 }
+
+.intro_content p{
+	font-size: 2vw;
+	
+	font-style: italic;
+	/*
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Bree Serif', serif;
+	font-family: 'Noto Serif', serif;
+	font-family: 'Moon_Bold';
+	font-family: 'Moon_Light';
+	font-family: 'Baufra_SemiBold';
+	font-family: 'Helvetica';
+	*/
+}
+
+.intro_content h1{
+	padding-top: 2vw;
+	
+	font-size: 5vw;
+	text-transform: uppercase;
+	
+	font-weight: 1000;
+	
+	font-family: 'Helvetica';
+}
+
 
 
 
@@ -169,7 +200,7 @@
 
 
 .btn{
-	padding: 4% 20%;
+	padding: 0.6vw 3.1vw;
 	
 	border-style: solid;
 	border-color: white;
@@ -184,6 +215,7 @@
 	letter-spacing: 0.1em;
 	white-space: nowrap;
 	text-transform: uppercase;
+	text-align: center;
 	
 	transition-property: all;
 	transition-timing-function: ease-in-out;
@@ -335,3 +367,25 @@
 
 
 
+
+
+/* Include fonts */
+@font-face{
+	font-family: 'Moon_Bold';
+	src: url('../../fonts/Moon_Bold.otf');
+}
+
+@font-face{
+	font-family: 'Moon_Light';
+	src: url('../../fonts/Moon_Light.otf');
+}
+
+@font-face{
+	font-family: 'Baufra_SemiBold';
+	src: url('../../fonts/Baufra_SemiBold.otf');
+}
+
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../../fonts/Helvetica.ttf');
+}
