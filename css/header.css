@@ -38,7 +38,7 @@
 .logo_svg rect{
 	fill: transparent;
 	stroke-width: 3px;
-	stroke: rgb(0, 0, 0);
+	stroke: rgb(255, 255, 255);
 	fill-opacity: 0.1;
 	
 	transform: translate(50%, 2%) scale(0.70711) rotate(45deg);
@@ -52,13 +52,14 @@
 	
 	font-family: 'Moon_Bold';
 	font-size: 20px;
+	fill: white;
 }
 
 .tabs_container a{
 	padding: 0.8vw 2.58vw;
 	
 	font-family: 'Moon_Light';
-	color: black;
+	color: white;
 	
 	transition-property: all;
 	transition-timing-function: ease-in-out;
