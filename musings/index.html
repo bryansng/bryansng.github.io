@@ -24,11 +24,40 @@
 			</div>
 		</div>
 		
+		<!-- Transition Container -->
 		<div class="transition"></div>
 		
-		<div class="content_container">
-			<div class="quotes_container" id="parent"></div>
-		</div>
+		<!-- Preloader for Quotes -->
+		<div class="preload_container" id="temp_parent"></div>
+		
+		<script>
+			// Preloader.
+			var new_quotes = document.createElement("div");
+			new_quotes.classList.add("preload_quotes");
+			
+			for (var i = 0; i < 5; i++){
+				var new_quote_container = document.createElement("div");
+				new_quote_container.classList.add("preload_quote_container");
+				
+				var new_date = document.createElement("div");
+				var new_quote = document.createElement("div");
+				var new_author = document.createElement("div");
+				new_date.classList.add("preload_date");
+				new_quote.classList.add("preload_quote");
+				new_author.classList.add("preload_author");
+				
+				new_quote_container.append(new_date);
+				new_quote_container.append(new_quote);
+				new_quote_container.append(new_author);
+				
+				new_quotes.append(new_quote_container);
+			}
+			var parent = document.getElementById("temp_parent");
+			parent.append(new_quotes);
+		</script>
+		
+		<!-- Quotes -->
+		<div class="content_container" id="parent"></div>
 		
 		{% include footer.html %}
 		
@@ -36,7 +65,8 @@
 			// Initialize Cloud Firestore through Firebase.
 			var db = firebase.firestore();
 			
-			var parent = document.getElementById("parent"); // get parent.
+			var new_quotes = document.createElement("div");
+			new_quotes.classList.add("quotes_container");
 			
 			db.collection("musings").orderBy("order").get().then((querySnapshot) => {
 				querySnapshot.forEach((doc) => {
@@ -72,9 +102,16 @@
 					new_author_p.append(new_author_cite);
 					new_div.append(new_author_p);
 					
-					parent.insertBefore(new_div, parent.childNodes[0]); // insert into first node.
+					new_quotes.insertBefore(new_div, new_quotes.childNodes[0]); // insert into first node.
 				});
 			});
+			
+			var parent = document.getElementById("parent"); // get parent.
+			parent.append(new_quotes);
+			parent.style.display = "block";
+			
+			var temp_parent = document.getElementById("temp_parent");
+			temp_parent.style.display = "none";
 		</script>
 		
 		<script>
