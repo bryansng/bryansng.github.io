@@ -7,16 +7,17 @@
 	
 	height: 100vh;
 	
-	background-image: url("../img/grip_1.jpg");
-	/*background-position: center;*/
+	opacity: 0.5;
+	
+	/* image url, position (x and y, for shifting image), linear-gradient. */
+	background: url("../img/grip_1.jpg"), linear-gradient(to right, black, black);
 	background-position: 0% 80%;		/* x and y, for shifting image. */
 	background-size: cover;
 	background-repeat: no-repeat;
-	opacity: 0.5;
-	/*background-attachment: fixed;*/	/* Used for parallax effect. */
+	/*background-blend-mode: screen;*/
+	background-blend-mode: hard-light;
 	
-	background-color: gray;
-	background-blend-mode: overlay;
+	filter: brightness(100%) grayscale(80%);
 }
 
 .intro_content{
@@ -26,7 +27,9 @@
 	
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%);
+	
+	color: white;
 }
 
 .intro_content p{
@@ -63,7 +66,7 @@
 
 
 
-/* Level Zero */
+/* Level Zero, container containing the whole thing. */
 .outer_flex{
 	display: flex;
 	flex-direction: column;
@@ -77,14 +80,14 @@
 /* Level One, all three divs in L1. */
 .container{
 	width: 100%;	/* Omitted = Content cluttered in the center. */
-	padding-bottom: 8vw;
+	padding-bottom: 6vw;
 }
 
 /* Level One, First div and last div. */
-.resume .container:first-child{
+.outer_flex .container:first-child{
 	padding-top: 3vw;
 }
-.resume .container:last-child{
+.outer_flex .container:last-child{
 	padding-bottom: 3vw;
 }
 
@@ -98,23 +101,113 @@
 	align-content: center;
 }
 
-/* Level Three, Technologies headers and lists. */
-.header_2{
-	padding-bottom: 0.5vw;
-	color: rgba(26, 26, 26, 0.75);
-	text-transform: uppercase;
+/* Level Three, headers for technologies, work_exp & edu. */
+.header_1{
+	width: 35%;
+	
+	font-size: 1.75vw;
+	color: #565656; /* Darker */
+	letter-spacing: 0.1vw;
+	font-family: 'Montserrat', sans-serif;
+	
+	padding-left: 8vw;
 }
-.wrapper ul{
+
+/* Level Three and Four, inner flexbox for techno, work_exp and edu. */
+.inner_row_flexbox{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	
+	justify-content: flex-start;
+}
+.inner_column_flexbox{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	
+	justify-content: flex-start;
+}
+.inner_flexbox_wrapper{
+	width: 65%;
+}
+
+/* Level Six, Technologies headers and lists. */
+.header_2{
+	padding-bottom: 3vh;
+	
+	color: black;
+	letter-spacing: 0.05vw;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+.comforts, .experience_with{
+	width: 50%;
+}
+.comforts ul, .experience_with ul{
 	list-style-type: disc;
 	
 	padding-left: 3vw;
+	
+	color: #1a1a1a; /* Lighter */
+	font-family: 'Montserrat', sans-serif;
+}
+.comforts ul li, .experience_with ul li{
+	padding-bottom: 2vh;
 }
 
-/* Level Three, headers for techonlogies, work_exp & edu. */
-.header_1{
-	color: grey;
-	text-transform: uppercase;
+/* Level Five, individual container that holds work_exp and edu. */
+.work, .edu{
+	padding-bottom: 8vh;
 }
+
+/* Level Six, individual attributes of each individual container in work_exp and edu. */
+.work .title, .edu .course{
+	padding-bottom: 3vh;
+	
+	color: black;
+	letter-spacing: 0.05vw;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+.work .company .link{
+	border-bottom-style: solid;
+	border-bottom-color: lightgrey;
+	border-bottom-width: 0.1vw;
+	
+	opacity: 1;
+	color: black;
+}
+.work .company .link:hover{
+	opacity: 0.7;
+}
+.work .company, .edu .institute, .location, .period{
+	color: #1a1a1a; /* Lighter */
+	opacity: 0.65;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+}
+.work .company, .work .location, .work .period{
+	font-weight: 600;
+}
+.work .desc{
+	padding-top: 1vh;
+	line-height: 185%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2vw;
+}
+.work, .edu{	/* Adds padding to look neater. */
+	padding-right: 5vw;
+}
+/* Commas */
+.company:after, .institute:after, .location:after{
+	content: ",";
+}
+
+
+
 
 
 
