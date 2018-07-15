@@ -7,13 +7,17 @@
 	
 	height: 100vh;
 	
-	background-image: url("../img/coding_1.jpg");
-	/*background-position: center;*/
+	opacity: 0.5;
+	
+	/* image url, position (x and y, for shifting image), linear-gradient. */
+	background: url("../img/coding_1.jpg"), linear-gradient(to right, grey, grey);
 	background-position: 0% 10%;		/* x and y, for shifting image. */
 	background-size: cover;
 	background-repeat: no-repeat;
-	opacity: 0.5;
-	/*background-attachment: fixed;*/	/* Used for parallax effect. */
+	/*background-blend-mode: screen;*/
+	background-blend-mode: hard-light;
+	
+	filter: brightness(100%) grayscale(50%);
 }
 
 .intro_content{
@@ -23,7 +27,9 @@
 	
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%);
+	
+	color: white;
 }
 
 .intro_content p{
