@@ -24,7 +24,9 @@
 	
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%)
+	transform: translate(-50%, -50%);
+	
+	color: white;
 }
 
 .intro_content p{
@@ -60,7 +62,7 @@
 
 
 
-.gallery_container{
+.gallery_container, .preload_container{
 	width: 100%;
 	
 	padding: 5vw;
@@ -72,17 +74,23 @@
 	
 	justify-content: center;
 }
+.gallery_container{
+	display: none;
+}
 
 .gallery_wrapper{
 	/* Maintains gallery symmetry */
 	padding: 0.5vw;
 }
 
-.gallery_img{
+.gallery_img, .preload_img{
 	/* 3:2 */
 	width: 360px;
 	height: 240px;
 	background-color: #EEEEEE;
+}
+.preload_img{
+	margin: 0.5vw;
 }
 
 .horizontal{

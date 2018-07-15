@@ -24,9 +24,22 @@
 			</div>
 		</div>
 		
+		<!-- Preloader for Gallery -->
+		<div class="preload_container" id="temp_parent"></div>
+		
+		<script>
+			// Preloader.
+			var parent = document.getElementById("temp_parent");
+			for (var i = 0; i < 9; i++){
+				var new_img = document.createElement("div");
+				new_img.classList.add("preload_img");
+				
+				parent.append(new_img);
+			}
+		</script>
+		
 		<!-- Grids -->
-		<div class="gallery_container" id="gallery_parent">
-		</div>
+		<div class="gallery_container" id="gallery_parent"></div>
 		
 		<script>
 			// Initialize Cloud Firestore through Firebase.
@@ -98,6 +111,10 @@
 					});
 				});
 			});
+			parent.style.display = "flex";
+			
+			var temp_parent = document.getElementById("temp_parent");
+			temp_parent.style.display = "none";
 		</script>
 		
 		<script>
