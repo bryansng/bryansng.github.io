@@ -1,0 +1,68 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="../shared_css/project_details.css"/>
+		<link rel="stylesheet" type="text/css" href="../shared_css/for_header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/own_project_details.css"/>
+		
+		<title>Reversi</title>
+	</head>
+	
+	<body>
+		{% include header.html %}
+		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_content">
+				<h1>Reversi</h1>
+				<h2>Reversi, a strategy board game for 2 players, played on an 8x8 uncheckered board. One player represents black discs, the other white discs. Players take turns placing discs on the board, with the objective to have the majority of discs turned to display their colors until the last playable empty square is filled.</h2>
+			</div>
+		</div>
+		
+		<div class="img_wrapper">
+			<img src="img/reversi_1.png" class="intro_img"/>
+		</div>
+		
+		<div class="content_container">
+			<div class="start">
+				<h3>Task - Implement the game logic</h3>
+			</div>
+			<div class="middle">
+				<ol>
+					<li>Start Condition - Gather player inputs and implement the board with the starting positions.</li>
+					<img src="img/A.1.png"/>
+					
+					<li>Managing turns - Player that represents the black disc starts the game.
+						<ol>
+							<li>Computing positions where the player can move</li>
+							<img src="img/A.2.1.png"/>
+							
+							<li>Asking the player where s/he wants to move</li>
+							<img src="img/A.2.2.png"/>
+							
+							<li>Discs placement</li>
+							<img src="img/A.2.3.png"/>
+						</ol>
+					</li>
+					
+					<li>Printing Final Results</li>
+					<img src="img/A.3.png"/>
+				</ol>
+			</div>
+			<div class="end">
+				<h3>Fun Facts</h3>
+				<ul>
+					<li>Linked List was used to store the set of coordinates that each player can place their discs.</li>
+				</ul>
+			</div>
+		</div>
+		
+		{% include footer.html %}
+	</body>
+	
+</html>

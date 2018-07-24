@@ -1,0 +1,83 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="../shared_css/project_details.css"/>
+		<link rel="stylesheet" type="text/css" href="../shared_css/for_header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/own_project_details.css"/>
+		
+		<title>The Social</title>
+	</head>
+	
+	<body>
+		{% include header.html %}
+		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_content">
+				<h1>The Social</h1>
+				<h2>Personal well-being website, aimed at the biophysical level of the self (i.e., social dynamics, self-improvement, self-actualization, self-discipline, etc). Beneficial for people of all ages who are interested in being better, or to be instilled with new possibilities.</h2>
+			</div>
+		</div>
+		
+		<div class="img_wrapper">
+			<img src="img/web_1.png" class="intro_img"/>
+		</div>
+		
+		<div class="content_container">
+			<div class="start">
+				<h3>Task</h3>
+				<h4>Design a promotional website targeted at an audience interested in joining a club/group in view of improving their personal fitness and/or well-being. Website should consists of 6 gradable pages.</h4>
+			</div>
+			<div class="middle">
+				<div class="homepage">
+					<img src="img/1_Home.jpg"/>
+				</div>
+				<div class="pages">
+					<div class="page">
+						<h4>Articles</h4>
+						<img src="img/2_Articles.png"/>
+					</div>
+					<div class="page">
+						<h4>Store</h4>
+						<img src="img/3_Store.png"/>
+					</div>
+					<div class="page">
+						<h4>Events</h4>
+						<img src="img/4_Events.jpg"/>
+					</div>
+					<div class="page">
+						<h4>Book List</h4>
+						<img src="img/5_Booklist.png"/>
+					</div>
+					<div class="page">
+						<h4>Contact</h4>
+						<img src="img/6_Contact.png"/>
+					</div>
+				</div>
+			</div>
+			<div class="end">
+				<h3>Fun Facts</h3>
+				<ul>
+					<li>Company logo and Social Media icons are made using SVGs, which allows for excellent visual scaling.</li>
+					<li>Company name gives visitors a near instant understanding of what the website is for (aimed to be a more sociable person).</li>
+					<li>There is a coming soon and a checkout page.</li>
+					<li>The Search tool in the Events page shows only the nearest (in terms of date) live programs because the filter algorithm doesn't take into account row span filtering.</li>
+					<li>Google's API is used in the Contact page.</li>
+					<li>Almost all media content are acquired from Pixabay.com, which offers CC0 Creative Commons art works.</li>
+					<li>Geodata's API was used to provide a broad selection of countries, their states and their cities in the Contact and Checkout page.</li>
+					<li>All images are compressed.</li>
+					<li>PHP was initially used to include files and dates, but because GitHub pages only allow for static websites, almost the entire website have to rewritten to be static.</li>
+					<li>Best viewed in Chrome.</li>
+				</ul>
+			</div>
+		</div>
+		
+		{% include footer.html %}
+	</body>
+	
+</html>

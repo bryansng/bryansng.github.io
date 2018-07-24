@@ -56,7 +56,6 @@
 	text-transform: uppercase;
 	
 	font-weight: 1000;
-	
 	font-family: 'Helvetica';
 }
 
@@ -66,43 +65,49 @@
 
 
 .desc_container{
-	padding: 4vw;
+	padding: 8vw 4vw;
 	
 	background-color: #EDEEEF;
 	
 	text-align: center;
-	color: rgba(26, 26, 26, 0.75);
+	color: #1A1A1A;
 }
 
 .desc_container h1{
-	font-size: 50px;
-	padding-bottom: 5px;
+	font-size: 40px;
+	padding-bottom: 10px;
 }
 
 .desc_container h2{
-	font-size: 40px;
+	padding: 0 8vw;
+	
+	font-size: 30px;
+	line-height: 3vw;
+	
+	opacity: 0.75;
 }
 
 
 
 
 
+.content_container{
+	padding: 8vw 1.5vw;
+}
 
 .header_container{
-	padding: 1.5vw;
+	padding-bottom: 1.5vw;
 	
 	text-align: center;
-	
-	font-family: 'Noto Serif', serif;
+	/*font-family: 'Noto Serif', serif;*/
 }
 
 .header_container h2{
-	font-size: 30px;
+	font-size: 40px;
+	color: #1A1A1A;
+	
+	opacity: 0.75;
 }
-
-
-
-
 
 .projects_container{
 	width: 100%;

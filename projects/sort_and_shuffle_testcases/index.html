@@ -1,0 +1,55 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="../shared_css/project_details.css"/>
+		<link rel="stylesheet" type="text/css" href="../shared_css/for_header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/own_project_details.css"/>
+		
+		<title>Sort and Shuffle Test Cases</title>
+	</head>
+	
+	<body>
+		{% include header.html %}
+		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_content">
+				<h1>Sort and Shuffle Test Cases</h1>
+				<h2>A program that uses CUnit to create test cases for the quick sort and fisherYates algorithms provided.</h2>
+			</div>
+		</div>
+		
+		<div class="img_wrapper">
+			<img src="img/sort_shuffle_testcase_1.png" class="intro_img"/>
+		</div>
+		
+		<div class="content_container">
+			<div class="start">
+				<h3>Task - Create a program that tests the quicksort and fisherYates methods provided.</h3>
+			</div>
+			<div class="middle">
+				<ol>
+					<li>Test Completeness of quicksort.</li>
+					<img src="img/1_sort.png"/>
+					
+					<li>Test Completeness of fisherYates.</li>
+					<img src="img/2_shuffle.png"/>
+				</ol>
+			</div>
+			<div class="end">
+				<h3>Fun Facts</h3>
+				<ul>
+					<li>The Knuth Fisher-Yates shuffle algorithm used in the iPod Playlist is inserted into the sortAndShuffle.c file. One could modify the pre-processor directive variables to enable the use of the algorithm to prove that the algorithm is unbiased.</li>
+				</ul>
+			</div>
+		</div>
+		
+		{% include footer.html %}
+	</body>
+	
+</html>

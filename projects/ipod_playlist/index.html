@@ -1,0 +1,61 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="../shared_css/project_details.css"/>
+		<link rel="stylesheet" type="text/css" href="../shared_css/for_header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/own_project_details.css"/>
+		
+		<title>iPod Playlist</title>
+	</head>
+	
+	<body>
+		{% include header.html %}
+		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_content">
+				<h1>iPod Playlist</h1>
+				<h2>A program that mimics the functionality of a music playlist by first sorting the playlist, followed by shuffling the playlist with songs' consecution in mind.</h2>
+			</div>
+		</div>
+		
+		<div class="img_wrapper">
+			<img src="img/playlist_1.png" class="intro_img"/>
+		</div>
+		
+		<div class="content_container">
+			<div class="start">
+				<h3>Task - Create a program that sort and shuffle a list of songs received as input</h3>
+			</div>
+			<div class="middle">
+				<ol>
+					<li>Read in user input from command line and store the artists and their songs.</li>
+					<img src="img/1_insert.png"/>
+					
+					<li>Sort the songs lexicographically via quick sort or merge sort and print out sorted songs by artist.</li>
+					<img src="img/2_sort.png"/>
+					
+					<li>Create playlist and shuffle tracks in the playlist using Knuth Fisher-Yates shuffle algorithm to create a random playlist where the same song cannot appear until 5 other different songs have. Finally, print the shuffled playlist onto the command line.</li>
+					<img src="img/3_shuffle.png"/>
+				</ol>
+			</div>
+			<div class="end">
+				<h3>Fun Facts</h3>
+				<ul>
+					<li>Both quick sort and merge sort were written to sort the songs and artists.</li>
+					<li>The unbiased Knuth Fisher-Yates Shuffle algorithm was used to shuffle the playlist.</li>
+					<li>Two approaches to the Knuth shuffle algorithm were written. One starting from the beginning of the array to the second last element, the other from the end to the second element.</li>
+					<li>The Consecution code will not work if the inputted songs are less than 6. So a small code is written to ensure that for the number of inputted songs smaller than 6, no songs will be repeated after itself.</li>
+				</ul>
+			</div>
+		</div>
+		
+		{% include footer.html %}
+	</body>
+	
+</html>
