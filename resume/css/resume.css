@@ -68,6 +68,8 @@
 
 /* Level Zero, container containing the whole thing. */
 .outer_flex{
+	padding: 8vw 0;
+	
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -85,10 +87,10 @@
 
 /* Level One, First div and last div. */
 .outer_flex .container:first-child{
-	padding-top: 3vw;
+	padding-top: 0vw;
 }
 .outer_flex .container:last-child{
-	padding-bottom: 3vw;
+	padding-bottom: 0vw;
 }
 
 /* Level Two, Technologies wrapper, for inner flexbox. */
