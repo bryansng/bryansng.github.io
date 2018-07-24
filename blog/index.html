@@ -5,35 +5,52 @@
 	
 	<head>
 		{% include global_resources.html %}
+		
+		<link rel="stylesheet" type="text/css" href="css/blog.css"/>
+		<link rel="stylesheet" type="text/css" href="css/for_header.css"/>
+		
+		<title>Computer Science Tips and Insights</title>
 	</head>
 	
 	<body>
 		{% include header.html %}
 		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_content">
+				<h1>Here's what's on my mind.</h1>
+				<h2>Venturing through the process of being a Computer Scientist, here's where I provide insights of my passion and life that I cumulated over the years.</h2>
+			</div>
+		</div>
+		
+		<div class="content_container">
+			<div class="entry">
+				<img src=""/>
+				<h5 class="category">Category</h5>
+				<h5 class="date">Date</h5>
+				<a href="" class="title a_remove_deco">BIG TITLE</a>
+				<h4 class="desc">Lorem ipsum dolor sit amet, eum no oblique molestiae. Pro ex quas harum platonem. Quando erroribus definitionem ne has. Ut libris perfecto partiendo pri. Et possit diceret intellegat eos, ius ei veri dolore, eu ius adipisci interpretaris.</h4>
+				<a href="" class="read_more a_remove_deco">Read More &nbsp;&#8594;</a>
+			</div>
+			<div class="entry">
+				<img src=""/>
+				<h5 class="category">Category</h5>
+				<h5 class="date">Date</h5>
+				<a href="" class="title a_remove_deco">BIG TITLE</a>
+				<h4 class="desc">Lorem ipsum dolor sit amet, eum no oblique molestiae. Pro ex quas harum platonem. Quando erroribus definitionem ne has. Ut libris perfecto partiendo pri. Et possit diceret intellegat eos, ius ei veri dolore, eu ius adipisci interpretaris.</h4>
+				<a href="" class="read_more a_remove_deco">Read More &nbsp;&#8594;</a>
+			</div>
+			<div class="entry">
+				<img src=""/>
+				<h5 class="category">Category</h5>
+				<h5 class="date">Date</h5>
+				<a href="" class="title a_remove_deco">BIG TITLE</a>
+				<h4 class="desc">Lorem ipsum dolor sit amet, eum no oblique molestiae. Pro ex quas harum platonem. Quando erroribus definitionem ne has. Ut libris perfecto partiendo pri. Et possit diceret intellegat eos, ius ei veri dolore, eu ius adipisci interpretaris.</h4>
+				<a href="" class="read_more a_remove_deco">Read More &nbsp;&#8594;</a>
+			</div>
+		</div>
+		
 		{% include footer.html %}
-		
-		<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-		<script>
-			// Initialize Firebase
-			var config = {
-			apiKey: "AIzaSyALABloSy_HEdQLTtZilGSgXiMTqMhnkR8",
-			authDomain: "personal-85bs.firebaseapp.com",
-			databaseURL: "https://personal-85bs.firebaseio.com",
-			projectId: "personal-85bs",
-			storageBucket: "personal-85bs.appspot.com",
-			messagingSenderId: "202949864657"
-			};
-			firebase.initializeApp(config);
-			
-			// Initialize Cloud Firestore through Firebase
-			var db = firebase.firestore();
-		</script>
-		
-		<script>
-			const firebase = require("firebase");
-			// Required for side-effects
-			require("firebase/firestore");
-		</script>
 	</body>
 	
 </html>
