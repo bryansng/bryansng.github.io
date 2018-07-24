@@ -6,7 +6,7 @@
 	flex-wrap: nowrap;
 	/* OR flex-flow: row nowrap; */
 	
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	
 	/*
@@ -24,6 +24,12 @@
 	justify-content: space-around;
 	align-items: center;
 }
+.logo_container a{
+	margin: 0 2vw;
+}
+.tabs_container{
+	margin: 0 1vw;
+}
 
 .logo_svg, .logo_svg svg{
 	text-align: center;
@@ -33,6 +39,10 @@
 .logo_svg svg, .logo_svg rect{
 	/* SVGs are inline by default, making it block makes it able to be centered. */
 	display: block;
+}
+
+.logo_svg rect, .logo_svg text{
+	cursor: pointer;
 }
 
 .logo_svg rect{
