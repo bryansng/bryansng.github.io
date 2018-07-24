@@ -1,31 +1,36 @@
 <div class="nav_container">
 	<div class="logo_container">
-		<div class="logo_svg">
-			<svg width="52" height="52">
-				<rect width="50" height="50"/>
-				<text>B&nbsp;S</text>
-			</svg>
-		</div>
+		<a href="{{ site.url }}/">
+			<div class="logo_svg">
+				<svg width="52" height="52">
+					<rect width="50" height="50"/>
+					<text>B&nbsp;S</text>
+				</svg>
+			</div>
+		</a>
 	</div>
 	
 	<div class="tabs_container">
-		<a href="http://127.0.0.1/" class="a_remove_deco" id="home">
+		<a href="{{ site.url }}/" class="a_remove_deco" id="home">
 			Home
 		</a>
-		<a href="http://127.0.0.1/resume/" class="a_remove_deco" id="work">
-			Resume
-		</a>
-		<a href="http://127.0.0.1/projects/" class="a_remove_deco" id="projects">
+		<a href="{{ site.url }}/projects/" class="a_remove_deco" id="projects">
 			Projects
 		</a>
-		<a href="http://127.0.0.1/photography/" class="a_remove_deco" id="photography">
+		<a href="{{ site.url }}/about/" class="a_remove_deco" id="about">
+			About
+		</a>
+		<a href="{{ site.url }}/resume/" class="a_remove_deco" id="work">
+			Resume
+		</a>
+		<a href="{{ site.url }}/photography/" class="a_remove_deco" id="photography">
 			Photography
 		</a>
-		<a href="http://127.0.0.1/blog/" class="a_remove_deco" id="blog">
+		<a href="{{ site.url }}/blog/" class="a_remove_deco" id="blog">
 			Blog
 		</a>
-		<a href="http://127.0.0.1/musings/" class="a_remove_deco" id="musings">
-			Musings
+		<a href="{{ site.url }}/contact/" class="a_remove_deco" id="contact">
+			Contact
 		</a>
 	</div>
 </div>
