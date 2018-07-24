@@ -1,0 +1,173 @@
+.intro_container{
+	width: 100%;
+}
+
+.intro_img{
+	position: relative;
+	
+	height: 100vh;
+	
+	opacity: 0.5;
+	
+	/* image url, position (x and y, for shifting image), linear-gradient. */
+	background: url("../img/stairs.JPG"), linear-gradient(to right, grey, grey);
+	background-position: 0% 10%;		/* x and y, for shifting image. */
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*background-blend-mode: screen;*/
+	background-blend-mode: hard-light;
+	
+	filter: brightness(100%) grayscale(50%);
+}
+
+.intro_content{
+	position: absolute;
+	
+	text-align: center;
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	color: white;
+}
+
+.intro_content p{
+	font-size: 2vw;
+	
+	font-style: italic;
+	/*
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Slab', serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Bree Serif', serif;
+	font-family: 'Noto Serif', serif;
+	font-family: 'Moon_Bold';
+	font-family: 'Moon_Light';
+	font-family: 'Baufra_SemiBold';
+	font-family: 'Helvetica';
+	*/
+}
+
+.intro_content h1{
+	padding-top: 2vw;
+	
+	font-size: 5vw;
+	text-transform: uppercase;
+	
+	font-weight: 1000;
+	font-family: 'Helvetica';
+}
+
+
+
+
+
+
+
+
+.chats{
+	padding: 15vh 5vw;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.chat{
+	display: block;
+	
+	padding: 2vw;
+	
+	width: 40%;
+	
+	border-style: solid;
+	border-color: #1A1A1A;
+	border-width: 2px;
+	
+	color: #1A1A1A;
+	
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.5s;
+	transition-delay: 0s;
+}
+.chat .category{
+	padding-bottom: 4vh;
+	
+	font-size: 4.5vw;
+}
+.chat .desc{
+	padding-bottom: 5vh;
+	
+	line-height: 2.25vw;
+	
+	font-size: 1.3vw;
+	font-family: 'Montserrat', sans-serif;
+}
+.chat .action{
+	display: inline-block;
+	
+	border-bottom-style: solid;
+	border-bottom-color: lightgray;
+	border-bottom-width: 0.1vh;
+	
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.chat:hover{
+	color: white;
+	
+	background-color: #1A1A1A;
+}
+.char:hover .action{
+	border-bottom-color: white;
+}
+
+
+
+
+
+.map_container{
+	cursor: default;
+	z-index: 1;
+}
+#map{
+	width: 100%;
+	height: 50vh;
+	
+	z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+/* Include fonts */
+@font-face{
+	font-family: 'Moon_Bold';
+	src: url('../../fonts/Moon_Bold.otf');
+}
+
+@font-face{
+	font-family: 'Moon_Light';
+	src: url('../../fonts/Moon_Light.otf');
+}
+
+@font-face{
+	font-family: 'Baufra_SemiBold';
+	src: url('../../fonts/Baufra_SemiBold.otf');
+}
+
+@font-face{
+	font-family: 'Helvetica';
+	src: url('../../fonts/Helvetica.ttf');
+}
