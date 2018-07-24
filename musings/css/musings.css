@@ -16,7 +16,7 @@
 	background-repeat: no-repeat;
 	background-blend-mode: hard-light;
 	
-	filter: brightness(100%) grayscale(80%);
+	filter: brightness(100%) grayscale(60%);
 }
 
 .intro_content{
