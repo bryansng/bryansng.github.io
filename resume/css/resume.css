@@ -21,6 +21,8 @@
 }
 
 .intro_content{
+	width: 100%;
+	
 	position: absolute;
 	
 	text-align: center;
@@ -141,6 +143,7 @@
 	color: black;
 	letter-spacing: 0.05vw;
 	text-transform: uppercase;
+	font-size: 1.2vw;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 }
@@ -156,12 +159,14 @@
 	font-family: 'Montserrat', sans-serif;
 }
 .comforts ul li, .experience_with ul li{
+	font-size: 1.2vw;
 	padding-bottom: 2vh;
 }
 
 /* Level Five, individual container that holds work_exp and edu. */
 .work, .edu{
 	padding-bottom: 8vh;
+	padding-right: 5vw; /* Adds padding to look neater. */
 }
 
 /* Level Six, individual attributes of each individual container in work_exp and edu. */
@@ -171,6 +176,7 @@
 	color: black;
 	letter-spacing: 0.05vw;
 	text-transform: uppercase;
+	font-size: 1.2vw;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
 }
@@ -178,18 +184,26 @@
 	border-bottom-style: solid;
 	border-bottom-color: lightgrey;
 	border-bottom-width: 0.1vw;
+	/*
+	text-decoration-style: solid;
+	text-decoration-line: underline;
+	text-decoration-color: lightgrey;
+	*/
+	font-size: 1.2vw;
+	color: black;
 	
 	opacity: 1;
-	color: black;
 }
 .work .company .link:hover{
 	opacity: 0.7;
 }
 .work .company, .edu .institute, .location, .period{
-	color: #1a1a1a; /* Lighter */
+	color: #1A1A1A; /* Lighter */
 	opacity: 0.65;
+	font-size: 1.2vw;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
+	line-height: 170%;
 }
 .work .company, .work .location, .work .period{
 	font-weight: 600;
@@ -200,12 +214,288 @@
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.2vw;
 }
-.work, .edu{	/* Adds padding to look neater. */
-	padding-right: 5vw;
-}
 /* Commas */
 .company:after, .institute:after, .location:after{
 	content: ",";
+}
+
+
+
+
+
+
+
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 35vh;
+	}
+	.intro_content p{
+		font-size: 5vw;
+	}
+	.intro_content h1{
+		font-size: 10vw;
+	}
+	
+	
+	/* Level Zero, container containing the whole thing. */
+	.outer_flex{
+		padding: 16vw 7vw;
+	}
+	
+	/* Level One, all three divs in L1. */
+	.container{
+		padding-bottom: 20vw;
+	}
+	
+	/* Level Two, Technologies wrapper, for inner flexbox. */
+	.middle_flex{
+		flex-direction: column;
+		flex-wrap: nowrap;
+		
+		justify-content: space-around;
+		align-content: center;
+	}
+	
+	/* Level Three, headers for technologies, work_exp & edu. */
+	.header_1{
+		width: 100%;
+		
+		font-size: 6vw;
+		letter-spacing: 0.1vw;
+		
+		padding-left: 0;
+		padding-bottom: 6vh;
+	}
+	
+	/* Level Three and Four, inner flexbox for techno, work_exp and edu. */
+	.inner_row_flexbox{
+		flex-wrap: wrap;
+		flex-direction: column;
+		
+		justify-content: flex-start;
+	}
+	.inner_column_flexbox{
+		flex-wrap: wrap;
+		flex-direction: column;
+		
+		justify-content: flex-start;
+	}
+	.inner_flexbox_wrapper{
+		width: 100%;
+	}
+	
+	/* Level Six, Technologies headers and lists. */
+	.header_2{
+		padding-bottom: 3vh;
+		
+		font-size: 3.9vw;
+		letter-spacing: 0.05vw;
+	}
+	.comforts, .experience_with{
+		width: 100%;
+		padding-bottom: 8vw;
+	}
+	.experience_with{
+		padding-bottom: 0;
+	}
+	.comforts ul, .experience_with ul{
+		list-style-position: inside;
+		padding-left: 5vw;
+	}
+	.comforts ul li, .experience_with ul li{
+		padding-bottom: 1.25vh;
+		font-size: 3.9vw;
+	}
+
+	/* Level Five, individual container that holds work_exp and edu. */
+	.work, .edu{
+		padding-bottom: 6vh;
+		padding-right: 0;
+	}
+	.work:last-child, .edu:last-child{
+		padding-bottom: 0;
+	}
+
+	/* Level Six, individual attributes of each individual container in work_exp and edu. */
+	.work .title, .edu .course{
+		padding-bottom: 2vh;
+		
+		font-size: 3.9vw;
+		letter-spacing: 0.05vw;
+	}
+	.work .company .link{
+		font-size: 3.9vw;
+		border-bottom-width: 0.4vw;
+	}
+	.work .company, .edu .institute, .location, .period{
+		font-size: 3.9vw;
+		line-height: 1.5em;	/* OR 170% */
+	}
+	.work .desc{
+		padding-top: 1vh;
+		line-height: 1.9em;
+		font-size: 3.75vw;
+	}
+}
+
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+@media only screen and (min-width: 600px) and (max-width: 1280px){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 45vh;
+	}
+	.intro_content p{
+		font-size: 3.5vw;
+	}
+	.intro_content h1{
+		font-size: 5vw;
+	}
+	
+	
+	/* Level Zero, container containing the whole thing. */
+	.outer_flex{
+		padding: 12vw 6vw;
+	}
+	
+	/* Level One, all three divs in L1. */
+	.container{
+		padding-bottom: 16vw;
+	}
+	
+	/* Level Two, Technologies wrapper, for inner flexbox. */
+	.middle_flex{
+		flex-direction: column;
+		flex-wrap: nowrap;
+		
+		justify-content: space-around;
+		align-content: center;
+	}
+	
+	/* Level Three, headers for technologies, work_exp & edu. */
+	.header_1{
+		width: 100%;
+		
+		font-size: 4vw;
+		letter-spacing: 0.1vw;
+		
+		padding-left: 0;
+		padding-bottom: 4vh;
+	}
+	
+	/* Level Three and Four, inner flexbox for techno, work_exp and edu. */
+	.inner_row_flexbox{
+		flex-wrap: wrap;
+		flex-direction: row;
+		
+		justify-content: flex-start;
+	}
+	.inner_column_flexbox{
+		flex-wrap: wrap;
+		flex-direction: column;
+		
+		justify-content: flex-start;
+	}
+	.inner_flexbox_wrapper{
+		width: 100%;
+	}
+	
+	/* Level Six, Technologies headers and lists. */
+	.header_2{
+		padding-bottom: 3vh;
+		
+		font-size: 2.1vw;
+		letter-spacing: 0.05vw;
+	}
+	.comforts, .experience_with{
+		width: 50%;
+		padding-bottom: 8vw;
+	}
+	.experience_with{
+		padding-bottom: 0;
+	}
+	.comforts ul, .experience_with ul{
+		list-style-position: inside;
+		padding-left: 5vw;
+	}
+	.comforts ul li, .experience_with ul li{
+		padding-bottom: 1.25vh;
+		font-size: 2.1vw;
+	}
+
+	/* Level Five, individual container that holds work_exp and edu. */
+	.work, .edu{
+		padding-bottom: 6vh;
+		padding-right: 0;
+	}
+	.work:last-child, .edu:last-child{
+		padding-bottom: 0;
+	}
+
+	/* Level Six, individual attributes of each individual container in work_exp and edu. */
+	.work .title, .edu .course{
+		padding-bottom: 2vh;
+		
+		font-size: 2.1vw;
+		letter-spacing: 0.05vw;
+	}
+	.work .company .link{
+		font-size: 2.1vw;
+		border-bottom-width: 0.4vw;
+	}
+	.work .company, .edu .institute, .location, .period{
+		font-size: 2.1vw;
+		line-height: 1.5em;	/* OR 170% */
+	}
+	.work .desc{
+		padding-top: 1vh;
+		line-height: 1.9em;
+		font-size: 2.5vw;
+	}
+	
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#work{
+		border-bottom-color: white;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+	.intro_img{
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#work{
+		border-bottom-color: white;
+	}
 }
 
 
