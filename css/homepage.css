@@ -39,6 +39,8 @@ body, html{
 }
 
 .name_container h1{
+	cursor: default;
+	
 	text-transform: uppercase;
 	font-family: 'Merriweather', serif;
 	font-size: 6vw;
@@ -132,7 +134,6 @@ body, html{
 
 	/* For Footer */
 	.footer_container{
-		padding: 1.5vw 0;
 		width: 100%;
 		
 		position: absolute;
@@ -192,7 +193,6 @@ body, html{
 
 	/* For Footer */
 	.footer_container{
-		padding: 1.5vw 0;
 		width: 100%;
 		
 		position: absolute;
