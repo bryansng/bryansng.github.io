@@ -32,7 +32,6 @@
 	display: none;
 	
 	cursor: pointer;
-	transform: scale(0.7);
 }
 .bar1, .bar2, .bar3{
 	width: 35px;
@@ -114,6 +113,7 @@
 	.burger_menu{
 		display: block;
 		padding: 0;
+		transform: scale(0.7);
 	}
 	/* Side Navigation Menu */
 	.side_nav{
@@ -165,6 +165,31 @@
 	/* Close btn */
 	.side_nav .close_btn{
 		display: none;
+	}
+}
+@media only screen and (max-width: 600px) and (orientation: landscape){
+	.burger_menu{
+		display: block;
+		padding: 0;
+	}
+	
+	/* Close btn */
+	.side_nav .close_btn{
+		width: 100%;
+		
+		display: block;
+		
+		padding: 3vw 3.6vw;
+		
+		font-size: 4.5vw;
+		text-align: right;
+	}
+	
+	.tabs_container a{
+		padding: 1vw 3.6vw;
+		
+		font-size: 4.5vw;
+		color: black;
 	}
 }
 
