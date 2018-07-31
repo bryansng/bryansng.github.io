@@ -1,16 +1,42 @@
 <div class="nav_container">
 	<div class="logo_container">
 		<a href="{{ site.url }}/">
+			<img src="{{ site.url }}/img/logo/white.png" class="logo_img"/>
+			<!--
 			<div class="logo_svg">
 				<svg width="52" height="52">
 					<rect width="50" height="50"/>
 					<text>B&nbsp;S</text>
 				</svg>
 			</div>
+			-->
 		</a>
 	</div>
 	
-	<div class="tabs_container">
+	<div class="burger_menu" onclick="openNav()">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+	
+	<script>
+		// Usage: onclick="toggleX(this)"
+		function toggleX(x){
+			x.classList.toggle("change");
+		}
+		
+		function openNav(){
+			document.getElementById("sideNav").style.width = "100vw";
+		}
+		function closeNav(){
+			document.getElementById("sideNav").style.width = "0";
+		}
+	</script>
+	
+	<div class="tabs_container side_nav" id="sideNav">
+		<div class="close_btn" onclick="closeNav()">
+			&times;
+		</div>
 		<a href="{{ site.url }}/" class="a_remove_deco" id="home">
 			Home
 		</a>
@@ -34,3 +60,35 @@
 		</a>
 	</div>
 </div>
+
+<script>
+	// Check if the navigation tab font color is black. If it is, change logo to the black variant.
+	function swapLogoImg(){
+		var firstA = document.getElementsByClassName("tabs_container")[0].getElementsByTagName("a")[0];
+		
+		// Can't access style directly, requires function to acqurie computed style.
+		var img = document.getElementsByClassName("logo_img")[0];
+		if (getComputedStyle(firstA).color == "rgb(0, 0, 0)"){
+			img.src = "{{ site.url }}/img/logo/black.png";
+		}
+		else if (getComputedStyle(firstA).color == "rgb(255, 255, 255)"){
+			img.src = "{{ site.url }}/img/logo/white.png";
+		}
+	}
+	
+	// Run on initial loading of page.
+	window.onload = swapLogoImg();
+	
+	// Run on successive resizing.
+	window.addEventListener("resize", swapLogoImg());
+	
+	// Run on orientation change.
+	window.addEventListener("orientationchange", function(){
+		if (window.matchMedia("(orientation: landscape)").matches){
+			swapLogoImg();
+		}
+		else if (window.matchMedia("(orientation: portrait)").matches){
+			swapLogoImg();
+		}
+	});
+</script>

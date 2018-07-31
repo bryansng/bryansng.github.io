@@ -21,6 +21,8 @@
 }
 
 .intro_content{
+	width: 100%;
+	
 	position: absolute;
 	
 	text-align: center;
@@ -75,14 +77,14 @@
 }
 
 .desc_container h1{
-	font-size: 40px;
-	padding-bottom: 10px;
+	font-size: 2.95vw;
+	padding-bottom: 0.75vw;
 }
 
 .desc_container h2{
 	padding: 0 8vw;
 	
-	font-size: 30px;
+	font-size: 2.2vw;
 	line-height: 3vw;
 	
 	opacity: 0.75;
@@ -101,14 +103,14 @@
 }
 
 .understand h1{
-	font-size: 37.5px;
+	font-size: 2.75vw;
 	padding-bottom: 2.5vw;
 	
 	letter-spacing: 0.2vw;
 }
 
 .understand p{
-	font-size: 17.5px;
+	font-size: 1.1vw;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 2.25vw;
 	
@@ -132,8 +134,15 @@
 	align-items: center;
 }
 .gallery_container img{
+	/*
+	width: 33.33vw;
+	height: 22.22vw;
+	*/
+	
 	width: 33.33%;
-	height: 11.11%;
+	height: 40vh;
+	
+	object-fit: cover;
 }
 
 
@@ -153,29 +162,39 @@
 }
 
 .what_i_can_do h1{
-	font-size: 40px;
+	font-size: 2.95vw;
 	padding-bottom: 5vh;
 }
 
 .what_i_can_do h2{
-	padding: 0 16vw;
+	padding: 0 20vw;
 	padding-bottom: 5vh;
 	
-	font-size: 17.5px;
+	font-size: 1.28vw;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 2.25vw;
 	
-	opacity: 0.75;
+	opacity: 0.95;
 }
 
-.what_i_can_do a{
+.what_i_can_do .view_my{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.view_my a{
 	display: inline-block;
 	
+	margin: 0 1vw;
 	padding: 2vw 3.75vw;
 	
 	border-style: solid;
 	border-color: #1A1A1A;
-	border-width: 2px;
+	border-width: 0.15vw;
 	
 	cursor: pointer;
 	
@@ -194,11 +213,200 @@
 	transition-delay: 0s;
 }
 
-.what_i_can_do a:hover{
+.view_my a:hover{
 	color: white;
 	background-color: #1A1A1A;
 }
 
 
 
+
+
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 35vh;
+	}
+	.intro_content p{
+		font-size: 5vw;
+		white-space: normal;
+	}
+	.intro_content h1{
+		font-size: 10vw;
+	}
+	
+	.desc_container{
+		padding: 17.5vw 3.6vw;
+	}
+	.desc_container h1{
+		font-size: 6.8vw;
+		padding-bottom: 5vw;
+	}
+	.desc_container h2{
+		padding: 0 4vw;
+		
+		font-size: 6vw;
+		line-height: 1.5em;
+	}
+	
+	.understand{
+		padding: 18vw 5vw;
+	}
+	.understand h1{
+		font-size: 7vw;
+		padding-bottom: 5vw;
+		
+		letter-spacing: 0;
+	}
+	.understand p{
+		font-size: 3.75vw;
+		line-height: 1.5em;
+	}
+	
+	.gallery_container img{
+		width: 50%;
+		height: 33.33vw;
+	}
+	
+	.what_i_can_do{
+		padding: 16vw 4vw;
+	}
+	.what_i_can_do h1{
+		font-size: 7vw;
+		padding-bottom: 3.5vh;
+	}
+	.what_i_can_do h2{
+		padding: 0;
+		padding-bottom: 4vh;
+		
+		font-size: 4vw;
+		line-height: 1.5em;
+	}
+	.view_my a{
+		margin: 0 1vw;
+		padding: 4vw 3.75vw;
+		
+		border-width: 0.5vw;
+		
+		font-size: 3.1vw;
+		letter-spacing: 0.1em;
+		white-space: nowrap;
+	}
+}
+
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+@media only screen and (min-width: 600px) and (max-width: 1280px){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 45vh;
+	}
+	.intro_content p{
+		font-size: 3.5vw;
+	}
+	.intro_content h1{
+		font-size: 5vw;
+	}
+	
+	.desc_container{
+		padding: 13vw 2vw;
+	}
+	.desc_container h1{
+		font-size: 4.2vw;
+		padding-bottom: 3vw;
+	}
+	.desc_container h2{
+		padding: 0 4vw;
+		
+		font-size: 4vw;
+		line-height: 1.2em;
+	}
+	
+	.understand{
+		padding: 14vw 5vw;
+	}
+	.understand h1{
+		font-size: 4.5vw;
+		padding-bottom: 5vw;
+		
+		letter-spacing: 0;
+	}
+	.understand p{
+		font-size: 2.8vw;
+		line-height: 1.5em;
+	}
+	
+	.gallery_container img{
+		width: 50%;
+		height: 33.33vw;
+	}
+	
+	.what_i_can_do{
+		padding: 14vw 4vw;
+	}
+	.what_i_can_do h1{
+		font-size: 4.5vw;
+		padding-bottom: 3vh;
+	}
+	.what_i_can_do h2{
+		padding: 0;
+		padding-bottom: 3.5vh;
+		
+		font-size: 3vw;
+		line-height: 1.5em;
+	}
+	.view_my a{
+		margin: 0 1vw;
+		padding: 3.8vw 4vw;
+		
+		border-width: 0.5vw;
+		
+		font-size: 2.6vw;
+		letter-spacing: 0.1em;
+		white-space: nowrap;
+	}
+	
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#about{
+		border-bottom-color: white;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+	.intro_img{
+		width: 100%;
+		height: 100vh;
+	}
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#about{
+		border-bottom-color: white;
+	}
+}
 

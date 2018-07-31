@@ -1,6 +1,4 @@
 .nav_container{
-	padding: 0.5vw 0vw;
-	
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -24,52 +22,50 @@
 	justify-content: space-around;
 	align-items: center;
 }
-.logo_container a{
-	margin: 0 2vw;
-}
-.tabs_container{
-	margin: 0 1vw;
+.logo_img{
+	object-fit: contain;
 }
 
-.logo_svg, .logo_svg svg{
-	text-align: center;
-	vertical-align: middle;
-}
 
-.logo_svg svg, .logo_svg rect{
-	/* SVGs are inline by default, making it block makes it able to be centered. */
-	display: block;
-}
 
-.logo_svg rect, .logo_svg text{
+.burger_menu{
+	display: none;
+	
 	cursor: pointer;
+	transform: scale(0.7);
+}
+.bar1, .bar2, .bar3{
+	width: 35px;
+	height: 3px;
+	background-color: #1A1A1A;
+	margin: 8px 0;
+	
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+	transition-delay: 0s;
+}
+/* Rotate first bar */
+.change .bar1{
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+/* Fade out second bar */
+.change .bar2{
+	opacity: 0;
+}
+/* Rotate last bar */
+.change .bar3{
+	transform: rotate(45deg) translate(-8px, -8px);
 }
 
-.logo_svg rect{
-	fill: transparent;
-	stroke-width: 3px;
-	stroke: rgb(255, 255, 255);
-	fill-opacity: 0.1;
-	
-	transform: translate(50%, 2%) scale(0.70711) rotate(45deg);
-	
-	position: relative;
-}
 
-.logo_svg text{
-	position: absolute;
-	transform: translate(24%, 63%);
-	
-	font-family: 'Moon_Bold';
-	font-size: 20px;
-	fill: white;
-}
+
 
 .tabs_container a{
 	padding: 0.8vw 2.58vw;
 	
+	font-size: 1.17vw;
 	font-family: 'Moon_Light';
-	color: white;
 	
 	transition-property: all;
 	transition-timing-function: ease-in-out;
@@ -79,10 +75,12 @@
 	border-bottom-color: transparent;
 	border-bottom-style: solid;
 	border-bottom-width: 3px;
+	border-bottom-width: 0.2vw;
 }
 
 .tabs_container a:hover{
 	box-shadow: 0px 0px 25px 2px #EEEEEE inset;
+	box-shadow: 0px 0px 1.6vw 0.175vw #EEEEEE inset;
 }
 
 
@@ -90,7 +88,109 @@
 
 
 
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+	.nav_container{
+		padding: 2.5vw 3.6vw;
+	}
+	
+	.tabs_container{
+		flex-direction: column;
+		
+		justify-content: right;
+		align-items: flex-end;
+	}
+	.tabs_container a{
+		padding: 1vw 5vw;
+		
+		font-size: 7.5vw;
+		color: black;
+	}
+	
+	.logo_img{
+		width: 10vw;
+		height: 10vw;
+	}
+	.burger_menu{
+		display: block;
+		padding: 0;
+	}
+	/* Side Navigation Menu */
+	.side_nav{
+		height: 100vh; /* 100% Full-height */
+		width: 0;	/* 0 width - change via JS */
+		
+		position: fixed; /* Stay in place */
+		top: 0; /* Stay at the top */
+		right: 0;
+		z-index: 1; /* Stay on top */
+		
+		background-color: #FFF; /* white */
+		
+		overflow: hidden; /* Disable scroll */
+	
+		transition-property: all;
+		transition-timing-function: ease-in-out;
+		transition-duration: 0.2s;
+		transition-delay: 0s;
+	}
+	/* Close btn */
+	.side_nav .close_btn{
+		width: 100%;
+		
+		padding: 3.6vw 5vw;
+		
+		font-size: 7.5vw;
+		text-align: right;
+	}
+}
 
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+@media only screen and (min-width: 600px) and (max-width: 1280px){
+	.nav_container{
+		padding: 2.5vw 3.6vw;
+	}
+	.logo_img{
+		width: 5vw;
+		height: 5vw;
+	}
+	.tabs_container a{
+		padding: 1vw 2.25vw;
+		
+		font-size: 1.5vw;
+		color: white;
+	}
+	
+	/* Close btn */
+	.side_nav .close_btn{
+		display: none;
+	}
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
+	.nav_container{
+		padding: 0.5vw 0vw;
+	}
+	.logo_container a{
+		margin: 0 2vw;
+	}
+	.logo_img{
+		width: 3.75vw;
+		height: 3.75vw;
+	}
+	.tabs_container{
+		margin: 0 1vw;
+	}
+	.tabs_container a{
+		color: white;
+	}
+	
+	/* Close btn */
+	.side_nav .close_btn{
+		display: none;
+	}
+}
 
 
 
@@ -119,3 +219,45 @@
 	font-family: 'Helvetica';
 	src: url('../../fonts/Helvetica.ttf');
 }
+
+
+
+
+/*
+OLD SVG LOGO
+.logo_svg, .logo_svg svg{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.logo_svg svg, .logo_svg rect{
+	/* SVGs are inline by default, making it block makes it able to be centered. *//*
+	display: block;
+}
+
+.logo_svg rect, .logo_svg text{
+	cursor: pointer;
+}
+
+.logo_svg rect{
+	fill: transparent;
+	stroke-width: 3px;
+	stroke-width: 0.225vw;
+	stroke: rgb(255, 255, 255);
+	fill-opacity: 0.1;
+	
+	transform: translate(50%, 2%) scale(0.70711) rotate(45deg);
+	
+	position: relative;
+}
+
+.logo_svg text{
+	position: absolute;
+	transform: translate(24%, 63%);
+	
+	font-family: 'Moon_Bold';
+	font-size: 20px;
+	font-size: 1.45vw;
+	fill: white;
+}
+*/
