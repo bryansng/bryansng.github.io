@@ -146,7 +146,8 @@
 }
 
 /* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
-@media only screen and (min-width: 600px) and (max-width: 1280px){
+/* And for small screens in landscape mode. */
+@media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
 	.nav_container{
 		padding: 2.5vw 3.6vw;
 	}
