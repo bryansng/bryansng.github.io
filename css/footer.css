@@ -81,7 +81,7 @@
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
 	.footer_container{
-		padding: 3.6vw 0;
+		padding: 0.5vw 0;
 	}
 	
 	.sm_container{
@@ -100,7 +100,7 @@
 /* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
 @media only screen and (min-width: 600px) and (max-width: 1280px){
 	.footer_container{
-		padding: 1.5vw 0;
+		padding: 0.5vw 0;
 	}
 	
 	.sm_container{
