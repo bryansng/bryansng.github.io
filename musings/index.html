@@ -9,7 +9,6 @@
 		{% include global_resources.html %}
 		
 		<link rel="stylesheet" type="text/css" href="css/musings.css"/>
-		<link rel="stylesheet" type="text/css" href="css/for_header.css"/>
 		
 		<title>Place of Inspiration</title>
 	</head>
@@ -82,6 +81,7 @@
 					
 					// Create a string formatted time for the date.
 					var date = new Date(data["time_uploaded"] * 1000);	// In milliseconds.
+					console.log(data["time_uploaded"] * 1000);
 					var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 					var month = months[date.getMonth()];
 					var year = date.getFullYear();
