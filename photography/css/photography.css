@@ -18,6 +18,8 @@
 }
 
 .intro_content{
+	width: 100%;
+	
 	position: absolute;
 	
 	text-align: center;
@@ -142,6 +144,8 @@
 	text-decoration: none;
 	
 	cursor: pointer;
+	
+	z-index: 5;
 }
 .close:hover, .close:focus{
 	opacity: 0.8;
@@ -219,19 +223,161 @@
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 35vh;
+	}
+	.intro_content p{
+		font-size: 5vw;
+	}
+	.intro_content h1{
+		font-size: 8vw;
+	}
+	
+	.gallery_container, .preload_container{
+		width: 100%;
+		
+		padding: 5vw 2vw;
+	}
+	.gallery_wrapper{
+		/* Maintains gallery symmetry */
+		padding: 0.5vw;
+	}
+	
+	.gallery_img, .preload_img{
+		/* 3:2 */
+		width: 88vw;
+		height: 58.67vw;
+	}
+	.gallery_img{
+		box-shadow: 1vw 1.15vw 1vw 0.15vw #DDD;
+	}
+	.preload_img{
+		margin: 0.5vw;
+	}
+	
+	.close{
+		margin: 50vw 3vw;
+		
+		font-size: 4vw;
+	}
+	
+	.modal_img{
+		width: 88vw;
+		height: 58.67vw;
+	}
+	
+	.prev, .next{
+		padding: 2vw 1.5vw;
+		margin: 0 1vw;
+		margin-top: -3.7vw;
+		width: auto;
+		
+		top: 50%;
+		
+		font-size: 3vw;
+	}
+	
+	.caption_container{
+		padding: 2px 16px;
+	}
 }
 
 /* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
 /* And for small screens in landscape mode. */
 @media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 100vh;
+	}
+	.intro_content p{
+		font-size: 3.5vw;
+	}
+	.intro_content h1{
+		font-size: 5vw;
+	}
+	
+	.gallery_container, .preload_container{
+		width: 100%;
+		
+		padding: 5vw 2vw;
+	}
+	.gallery_wrapper{
+		/* Maintains gallery symmetry */
+		padding: 0.7vw;
+	}
+	
+	.gallery_img, .preload_img{
+		/* 3:2 */
+		width: 45vw;
+		height: 30vw;
+	}
+	.gallery_img{
+		box-shadow: 1vw 1.15vw 1vw 0.15vw #DDD;
+	}
+	.preload_img{
+		margin: 0.5vw;
+	}
+	
+	.close{
+		margin: 1.75vw 2vw;
+		
+		font-size: 3.5vw;
+	}
+	
+	.modal_img{
+		width: 80vw;
+		height: 53.33vw;
+	}
+	
+	.prev, .next{
+		padding: 2vw 1.5vw;
+		margin: 0 1vw;
+		margin-top: -3.7vw;
+		width: auto;
+		
+		top: 50%;
+		
+		font-size: 3vw;
+	}
+	
+	.caption_container{
+		padding: 2px 16px;
+	}
+	
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#photography{
+		border-bottom-color: white;
+	}
 }
 
-/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
-@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+/* In Ipad or larger mobile screens in portrait, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: portrait){
+	.intro_img{
+		height: 45vh;
+	}
 }
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px){
+	.intro_content{
+		width: 75%;
+	}
+		
 	/* For Header */
 	.nav_container{
 		width: 100%;
