@@ -1,16 +1,18 @@
 .content_container{
 	padding: 8vw 5vw;
 	
-	font-size: 20px;
+	font-size: 1.5vw;
 	font-family: 'Montserrat', sans-serif;
 	color: #1A1A1A;
 }
 
 .start h3{
+	font-size: 1.5vw;
 	padding-bottom: 5vh;
 }
 
 .middle li{
+	font-size: 1.5vw;
 	padding-bottom: 2vh;
 }
 .middle img{
@@ -31,4 +33,70 @@
 .middle ol li:before{
 	counter-increment: section;
 	content: "A." counters(section,".") " ";
+}
+
+
+
+
+
+
+
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+	.content_container{
+		padding: 8vw 4vw;
+		
+		font-size: 5vw;
+	}
+
+	.start h3{
+		font-size: 5.5vw;
+		padding-bottom: 4vw;
+	}
+
+	.middle li{
+		font-size: 5vw;
+		padding-bottom: 4vw;
+	}
+	.middle img{
+		margin-bottom: 18vw;
+	}
+}
+
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+/* And for small screens in landscape mode. */
+@media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
+	.content_container{
+		padding: 8vw 4vw;
+		
+		font-size: 5vw;
+	}
+
+	.start h3{
+		font-size: 3vw;
+		padding-bottom: 2vw;
+	}
+
+	.middle li{
+		font-size: 2.5vw;
+		padding-bottom: 2vw;
+	}
+	.middle img{
+		margin-bottom: 10vw;
+	}
+}
+/* Just Medium Devices. */
+@media only screen and (min-width: 600px) and (max-width: 1280px){
+	#projects{
+		border-bottom-color: black;
+	}
+}
+/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
 }

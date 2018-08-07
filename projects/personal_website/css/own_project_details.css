@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+}
+
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+/* And for small screens in landscape mode. */
+@media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
+}
+/* Just Medium Devices. */
+@media only screen and (min-width: 600px) and (max-width: 1280px){
+	#projects{
+		border-bottom-color: black;
+	}
+}
+/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
+}
