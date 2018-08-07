@@ -308,7 +308,7 @@
 	}
 	.intro_img{
 		width: 100%;
-		height: 45vh;
+		height: 100vh;
 	}
 	.intro_content p{
 		font-size: 3.5vw;
@@ -388,11 +388,10 @@
 		border-bottom-color: white;
 	}
 }
-/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
-@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+/* In Ipad or larger mobile screens in portrait, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: portrait){
 	.intro_img{
-		width: 100%;
-		height: 100vh;
+		height: 45vh;
 	}
 }
 
