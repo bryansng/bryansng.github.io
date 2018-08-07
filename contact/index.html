@@ -212,6 +212,7 @@
 			// Displays the loading text with animation in the success modal.
 			function loadingModal(){
 				modal.style.display = "block";
+				modal.children[0].classList.toggle("border_loading");
 				modal.getElementsByTagName("h2")[0].innerHTML = "Loading";
 				modal.getElementsByTagName("h2")[0].classList.toggle("loading");
 				modal.getElementsByTagName("h3")[0].innerHTML = "";
@@ -220,6 +221,8 @@
 			
 			// Displays the success text in the success modal.
 			function doneModal(){
+				modal.children[0].classList.toggle("border_loading");
+				modal.children[0].classList.toggle("border_success");
 				modal.getElementsByTagName("h2")[0].innerHTML = h2_msg;
 				modal.getElementsByTagName("h2")[0].classList.toggle("loading");
 				modal.getElementsByTagName("h3")[0].innerHTML = h3_msg;

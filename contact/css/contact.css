@@ -90,7 +90,7 @@
 	
 	border-style: solid;
 	border-color: #1A1A1A;
-	border-width: 2px;
+	border-width: 0.15vw;
 	
 	color: #1A1A1A;
 	
@@ -119,6 +119,7 @@
 	border-bottom-color: lightgray;
 	border-bottom-width: 0.1vh;
 	
+	font-size: 1.2vw;
 	font-weight: 500;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -181,7 +182,7 @@
 .top h2{
 	word-spacing: 0.25vw;
 	
-	font-size: 28px;
+	font-size: 2.15vw;
 	font-weight: 600;
 	line-height: 2.25vw;
 	
@@ -245,21 +246,27 @@
 .inner_column input, .middle input, .middle textarea{
 	width: 100%;
 	
-	padding: 12px;
+	padding: 0.9vw;
 	
 	background-color: #FAFAFA;
 	
 	border-color: #CCC;
 	border-style: solid;
-	border-width: 1px;
+	border-width: 0.075vw;
 	
 	line-height: normal;
 	color: #000;
+	
+	font-size: 1.2vw;
 }
 input:focus, textarea:focus{
 	outline: none;
+	background-color: white;
 }
 /*border-color: #cc3b3b;*/
+.inner_column input{
+	margin-bottom: 0vh;
+}
 .inner_column label{
 	margin-top: 1.25vh;
 	
@@ -288,7 +295,7 @@ input:focus, textarea:focus{
 	
 	background-color: #1A1A1A;
 	
-	font-size: 14px;
+	font-size: 1.1vw;
 	text-align: center;
 	color: white;
 	
@@ -314,13 +321,19 @@ input:focus, textarea:focus{
 	
 	z-index: 10;	/* Sit on top */
 }
+.gen_ques_success_modal .border_loading{
+	border-color: darkgray;
+}
+.gen_ques_success_modal .border_success{
+	border-color: #16ff0a;	/* Neon Green */
+}
 .gen_ques_success_content{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	
-	padding: 3vw 3vw;
+	padding: 3vw;
 	
 	width: 50%;	/* Could be more or less, depending on screen size. */
 	
@@ -329,8 +342,7 @@ input:focus, textarea:focus{
 	text-align: center;
 	font-family: 'Montserrat', sans-serif;
 	
-	border-color: #16ff0a;	/* Neon Green */
-	border-width: 2px;
+	border-width: 0.15vw;
 	border-style: solid;
 }
 .success_msg .close{
@@ -338,6 +350,7 @@ input:focus, textarea:focus{
 	
 	padding-top: 1vw;
 	padding-right: 1.5vw;
+	font-size: 2.1vw;
 	
 	top: 0;
 	right: 0;
@@ -397,15 +410,280 @@ input:focus, textarea:focus{
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 35vh;
+	}
+	.intro_content p{
+		font-size: 5vw;
+	}
+	.intro_content h1{
+		font-size: 8vw;
+	}
+	
+	.chats{
+		padding: 18vw 6vw;
+	}
+	.chat{
+		padding: 13vw;
+		width: 100%;
+		border-width: 0.5vw;
+	}
+	.chat .category{
+		padding-bottom: 4vh;
+		font-size: 12vw;
+	}
+	.chat .desc{
+		padding-bottom: 4vh;
+		line-height: 1.5em;
+		font-size: 4.5vw
+	}
+	.chat .action{
+		border-bottom-width: 0.1vh;
+		font-size: 5vw;
+	}
+	
+	.gen_ques_modal_content{
+		padding: 5vh 9vw;
+		
+		width: 100%;
+		height: 100vh;
+	}
+	.gen_ques_modal_content .top{
+		padding-bottom: 6vh;
+	}
+	.top h2{
+		word-spacing: 0.25vw;
+		
+		font-size: 7vw;
+		font-weight: 500;
+		line-height: 1.1em;
+	}
+	.close{
+		font-size: 8vw;
+	}
+
+
+	.middle h3, .middle h4, .middle label{
+		padding-bottom: 1.5vh;
+	}
+	.middle h3, .middle label{
+		font-size: 4.2vw;
+	}
+	.middle input, .middle textarea{
+		margin-bottom: 5vh;
+	}
+	.middle h4{
+		font-size: 1.75vh;
+		opacity: 0.75;
+	}
+
+	.inner_column{
+		width: 49%;
+		
+		margin-bottom: 5vh;
+	}
+	.inner_column input, .middle input, .middle textarea{
+		padding: 3.7vw;
+		border-width: 0.3vw;
+		font-size: 4vw;
+	}
+	.inner_column input{
+		margin-bottom: 0vh;
+	}
+	.inner_column label{
+		margin-top: 1.25vh;
+		
+		font-size: 2vh;
+	}
+
+	.bottom .send_msg{
+		padding: 2.25vh 12vw;
+		
+		font-size: 4.5vw;
+	}
+	.gen_ques_success_content{
+		padding: 6vw;
+		
+		width: 90%;	/* Could be more or less, depending on screen size. */
+		
+		border-width: 0.5vw;
+	}
+	.success_msg .close{
+		padding-top: 1vw;
+		padding-right: 2vw;
+		font-size: 7vw;
+	}
+	.success_msg h2{
+		padding-bottom: 1vw;
+		font-size: 5vw;
+	}
+	.success_msg h3{
+		font-size: 4.2vw;
+	}
+
+	#map{
+		width: 100%;
+		height: 75vh;
+	}
 }
 
 /* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
 /* And for small screens in landscape mode. */
 @media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
-}
+	.intro_container{
+		position: relative;
+	}
+	.intro_img{
+		width: 100%;
+		height: 100vh;
+	}
+	.intro_content p{
+		font-size: 3.5vw;
+	}
+	.intro_content h1{
+		font-size: 4vw;
+	}
+	
+	.chats{
+		padding: 12vw 5vw;
+	}
+	.chat{
+		padding: 7vw;
+		width: 100%;
+		border-width: 0.4vw;
+	}
+	.chat .category{
+		padding-bottom: 6vh;
+		font-size: 8vw;
+	}
+	.chat .desc{
+		padding-bottom: 14vh;
+		line-height: 1.5em;
+		font-size: 3vw;
+	}
+	.chat .action{
+		border-bottom-width: 0.1vh;
+		font-size: 2.8vw;
+	}
+	
+	.gen_ques_modal{
+		background-color: white;
+	}
+	.gen_ques_modal_content{
+		padding: 5vh 9vw;
+		
+		width: 100%;
+		height: 100%;
+		
+		background-color: transparent;
+	}
+	.gen_ques_modal_content .top{
+		padding-bottom: 6vh;
+	}
+	.top h2{
+		word-spacing: 0.25vw;
+		
+		font-size: 4vw;
+		font-weight: 500;
+		line-height: 1.1em;
+	}
+	.close{
+		font-size: 5vw;
+	}
 
-/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
-@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+	.middle{
+		padding-bottom: 2vw;
+	}
+	.middle h3, .middle h4, .middle label{
+		padding-bottom: 2vh;
+	}
+	.middle h3, .middle label{
+		font-size: 2.6vw;
+	}
+	.middle input, .middle textarea{
+		margin-bottom: 5vh;
+	}
+	.middle h4{
+		font-size: 2vw;
+		opacity: 0.75;
+	}
+
+	.inner_column{
+		width: 49%;
+		
+		margin-bottom: 5vh;
+	}
+	.inner_column input, .middle input, .middle textarea{
+		padding: 2vw;
+		border-width: 0.3vw;
+		font-size: 2.7vw;
+	}
+	.inner_column input{
+		margin-bottom: 0vh;
+	}
+	.inner_column label{
+		margin-top: 1.25vh;
+		
+		font-size: 2vw;
+	}
+
+	.bottom .send_msg{
+		padding: 3vh 10vw;
+		
+		font-size: 2.5vw;
+	}
+	.gen_ques_success_content{
+		padding: 6vw;
+		
+		width: 90%;	/* Could be more or less, depending on screen size. */
+		
+		border-width: 0.5vw;
+	}
+	.success_msg .close{
+		padding-top: 1vw;
+		padding-right: 2vw;
+		font-size: 5vw;
+	}
+	.success_msg h2{
+		padding-bottom: 2vw;
+		font-size: 3vw;
+	}
+	.success_msg h3{
+		font-size: 2.5vw;
+	}
+
+	#map{
+		width: 100%;
+		height: 100vh;
+	}
+	
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#contact{
+		border-bottom-color: white;
+	}
+}
+/* In Ipad or larger mobile screens in portrait, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: portrait){
+	.intro_img{
+		height: 45vh;
+	}
+
+	#map{
+		width: 100%;
+		height: 75vh;
+	}
 }
 
 /* Large devices (laptops/desktops, 1280px and up) */
