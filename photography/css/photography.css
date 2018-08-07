@@ -85,9 +85,14 @@
 
 .gallery_img, .preload_img{
 	/* 3:2 */
-	width: 360px;
-	height: 240px;
+	width: 27vw;
+	height: 18vw;
 	background-color: #EEEEEE;
+	
+	cursor: pointer;
+}
+.gallery_img{
+	box-shadow: 0.1vw 0.15vw 1.02vw 0.15vw #DDD;
 }
 .preload_img{
 	margin: 0.5vw;
@@ -99,6 +104,146 @@
 
 .vertical{
 	object-fit: contain;
+}
+
+
+
+
+
+
+.modal{
+	display: none;	/* Hidden by default */
+	position: fixed;	/* Stay in place */
+	
+	width: 100%;	/* Full width */
+	height: 100%;	/* Full height */
+	
+	overflow: auto;	/* Enable scroll if needed (will be disabled later) */
+	
+	left: 0;
+	top: 0;
+	
+	background-color: rgba(0, 0, 0, 0.9);	/* Black w/ opacity */
+	
+	z-index: 1;	/* Sit on top */
+}
+
+/* The Close Button */
+.close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+	margin: 1.25vw 3vw;
+	
+	color: white;
+	font-size: 2.1vw;
+	
+	text-decoration: none;
+	
+	cursor: pointer;
+}
+.close:hover, .close:focus{
+	opacity: 0.8;
+}
+
+.modal_content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	font-family: 'Montserrat', sans-serif;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+
+.slides_wrapper{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+.slide{
+	display: none;	/* Hide other slides by default. */
+	
+	position: relative;
+}
+.modal_img{
+	width: 70vw;
+	height: 46.67vw;
+}
+
+/* Next & previous buttons */
+.prev, .next{
+	padding: 1.5vw;
+	margin: 0 1vw;
+	margin-top: -3.7vw;
+	width: auto;
+	
+	top: 50%;
+	
+	color: white;
+	font-weight: bold;
+	font-size: 1.6vw;
+	
+	user-select: none;
+	cursor: pointer;
+}
+/* On hover, add a black background color with a little bit see-through. */
+.prev:hover, .next:hover{
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.caption_container{
+	text-align: center;
+	background-color: black;
+	padding: 2px 16px;
+	color: white;
+}
+
+
+
+
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+}
+
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+/* And for small screens in landscape mode. */
+@media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
+}
+
+/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
+	/* For Header */
+	.nav_container{
+		width: 100%;
+		
+		position: absolute;
+		z-index: 1;
+		
+		background-color: transparent;
+	}
+	#photography{
+		border-bottom-color: white;
+	}
 }
 
 
