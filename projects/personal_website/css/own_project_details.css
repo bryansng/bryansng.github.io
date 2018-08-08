@@ -1,4 +1,55 @@
+.content_container{
+	padding: 8vw 4vw;
+	
+	font-size: 1.5vw;
+	font-family: 'Montserrat', sans-serif;
+	color: #1A1A1A;
+}
 
+.start h3{
+	padding-bottom: 2vh;
+}
+.start h3:after{
+	content: ":";
+}
+.start h4{
+	padding-bottom: 5vh;
+}
+
+.homepage{
+	padding: 10vh 10vw;
+	
+	background-color: #E1E1E1;
+}
+.homepage img{
+	width: 100%;
+	
+	object-fit: auto;
+}
+
+.pages{
+	margin: 10vh 0;
+	padding: 10vh 2.5vw;
+	background-color: #E1E1E1;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: space-around;
+}
+.page{
+	padding: 2vw;
+}
+.page h4{
+	padding-bottom: 1vw;
+	text-align: center;
+}
+.page img{
+	height: 80vh;
+	
+	object-fit: contain;
+}
 
 
 
@@ -10,16 +61,89 @@
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
+	.content_container{
+		padding: 8vw 4vw;
+		font-size: 5vw;
+	}
+	
+	.start h3{
+		font-size: 5.5vw;
+		padding-bottom: 2vh;
+	}
+	.start h4{
+		font-size: 5vw;
+		padding-bottom: 5vh;
+	}
+	
+	.homepage{
+		padding: 4vw;
+	}
+
+	.pages{
+		margin: 10vh 0;
+		padding: 2vw 2.5vw;
+	}
+	.pages .page:first-child{
+		padding-top: 0;
+	}
+	.pages .page:last-child{
+		padding-bottom: 0;
+	}
+	.page{
+		font-size: 5vw;
+		padding: 10vw 0;
+	}
+	.page h4{
+		padding-bottom: 2vw;
+	}
+	.page img{
+		width: 100%;
+		height: auto;
+	}
 }
 
 /* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
 /* And for small screens in landscape mode. */
 @media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
-}
-/* Just Medium Devices. */
-@media only screen and (min-width: 600px) and (max-width: 1280px){
-	#projects{
-		border-bottom-color: black;
+	.content_container{
+		padding: 8vw 4vw;
+		font-size: 4.5vw;
+	}
+	
+	.start h3{
+		font-size: 3.25vw;
+		padding-bottom: 4vh;
+	}
+	.start h4{
+		font-size: 3vw;
+		padding-bottom: 5vh;
+		line-height: 1.25em;
+	}
+	
+	.homepage{
+		padding: 4vw;
+	}
+
+	.pages{
+		margin: 10vh 0;
+		padding: 2vw 2.5vw;
+	}
+	.pages .page:first-child{
+		padding-top: 0;
+	}
+	.pages .page:last-child{
+		padding-bottom: 0;
+	}
+	.page{
+		font-size: 3vw;
+		padding: 10vw 0;
+	}
+	.page h4{
+		padding-bottom: 2vw;
+	}
+	.page img{
+		width: 100%;
+		height: auto;
 	}
 }
 /* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
