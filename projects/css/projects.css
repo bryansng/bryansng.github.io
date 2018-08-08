@@ -20,6 +20,10 @@
 	filter: brightness(100%) grayscale(50%);
 }
 
+.darken_overlay{
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .intro_content{
 	width: 100%;
 	
