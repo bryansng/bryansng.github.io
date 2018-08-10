@@ -138,6 +138,7 @@ body, html{
 		
 		position: absolute;
 		bottom: 0;
+		left: 0;
 		
 		/* Misc */
 		z-index: 1;
@@ -167,18 +168,17 @@ body, html{
 	}
 	
 	.name_bold{
-		font-size: 6vw;
+		font-size: 10vw;
 	}
 	.name_container h1{
-		font-size: 5vw;
+		font-size: 8vw;
 	}
 	
-	.main_nav_container{
-		padding-top: 1.5vw;
-	}
 	.main_nav_container a{
 		padding: 1vw 2vw;
-		font-size: 1.5vw;
+	}
+	.main_nav_container a, .main_nav_container span{
+		font-size: 2vw;
 	}
 	
 	/* For Header */
@@ -197,6 +197,7 @@ body, html{
 		
 		position: absolute;
 		bottom: 0;
+		left: 0;
 		
 		/* Misc */
 		z-index: 1;
@@ -214,6 +215,22 @@ body, html{
 	}
 	.copy_container{
 		font-size: 2.5vw;
+	}
+}
+/* For small screens in landscape mode. */
+@media only screen and (max-width: 600px) and (orientation: landscape){
+	.name_bold{
+		font-size: 8vw;
+	}
+	.name_container h1{
+		font-size: 6vw;
+	}
+	
+	.main_nav_container{
+		padding-top: 0;
+	}
+	.main_nav_container a{
+		font-size: 3vw;
 	}
 }
 
@@ -246,6 +263,7 @@ body, html{
 		
 		position: absolute;
 		bottom: 0;
+		left: 0;
 		
 		/* Misc */
 		z-index: 1;
