@@ -37,42 +37,60 @@
 		
 		<!-- The Modals -->
 		<div class="gen_ques_modal" id="gen_ques_modal">
-			<div class="gen_ques_modal_content">
-				<div class="top">
-					<h2>General Questions</h2>
-					<div class="close">&times;</div>
-				</div>
-				
-				<div class="middle">
-					<form action="" id="contactForm" form="post">
-						<h3>Full Name *</h3>
-						<h4>I always like to know who I'm speaking with.</h4>
-						<div class="inner_row">
-							<div class="inner_column">
-								<input type="text" name="fname" id="fname" autocomplete="given-name"/>
-								<div>
-									<label for="fname">First Name</label>
+			<div class="gen_ques_modal_wrapper" id="gen_ques_wrapper">
+				<div class="gen_ques_modal_content">
+					<div class="top">
+						<h2>General Questions</h2>
+						<div class="close">&times;</div>
+					</div>
+					
+					<div class="middle">
+						<form action="" id="contactForm" form="post">
+							<div>
+								<div id="formError">Your form has encountered a problem. Please scroll down to review.</div>
+							</div>
+							<div id="formNameError">Full Name is required.</div>
+							<div id="formName">
+								<h3>Full Name *</h3>
+								<h4>I always like to know who I'm speaking with.</h4>
+								<div class="inner_row">
+									<div class="inner_column">
+										<input type="text" name="fname" id="fname" autocomplete="given-name"/>
+										<div>
+											<label for="fname">First Name</label>
+										</div>
+									</div>
+									<div class="inner_column">
+										<input type="text" name="lname" id="lname" autocomplete="family-name"/>
+										<div>
+											<label for="lname">Last Name</label>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="inner_column">
-								<input type="text" name="lname" id="lname" autocomplete="family-name"/>
-								<div>
-									<label for="lname">Last Name</label>
-								</div>
+							
+							<div id="formEmailError">Email Address is required.</div>
+							<div id="formEmail">
+								<label for="email">Email Address *</label>
+								<input type="email" name="email" id="email" autocomplete="email" style="display: none;"/>
+								<input type="email" name="actual_email" id="actual_email" autocomplete="email"/>
 							</div>
-						</div>
-						
-						<label for="email">Email Address *</label>
-						<input type="email" name="email" id="email" autocomplete="email"/>
-						
-						<label for="msg">Your Message *</label>
-						<h4>Send something awesome to my inbox.</h4>
-						<textarea rows="5" name="msg" id="msg"></textarea>
-				
-						<div class="bottom">
-							<input type="submit" value="Send Message" class="send_msg"/>
-						</div>
-					</form>
+							
+							<div id="formMsgError">Your Message is required.</div>
+							<div id="formMsg">
+								<label for="msg">Your Message *</label>
+								<h4>Send something awesome to my inbox.</h4>
+								<textarea rows="5" name="msg" id="msg"></textarea>
+							</div>
+					
+							<div class="bottom">
+								<input type="submit" value="Send Message" class="send_msg"/>
+							</div>
+							<div>
+								<div id="formError">Your form has encountered a problem. Please scroll up to review.</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="gen_ques_success_modal" id="gen_ques_success_modal">
@@ -94,8 +112,9 @@
 			// Get trigger that opens modal.
 			var gen_ques = document.getElementById("gen_ques");
 			
-			// Get modal.
+			// Get modals.
 			var gen_ques_modal = document.getElementById("gen_ques_modal");
+			var gen_ques_wrapper = document.getElementById("gen_ques_wrapper");
 			var gen_ques_success_modal = document.getElementById("gen_ques_success_modal");
 			
 			// Get the <div> element that closes the modal.
@@ -112,17 +131,23 @@
 			modal_close.onclick = function(){
 				gen_ques_modal.style.display = "none";
 				body.style.overflow = "auto";
+				
+				// Reset styles.
+				removeErrorStyles();
 			}
 			// When user clicks on the <div> (x), close the modal and the msg.
 			success_close.onclick = function(){
 				gen_ques_success_modal.style.display = "none";
 				gen_ques_modal.style.display = "none";
 				body.style.overflow = "auto";
+				
+				// Reset styles.
+				removeErrorStyles();
 			}
 			
 			// When user clicks anywhere outside the modal, close it
 			window.onclick = function(event){
-				if (event.target == gen_ques_modal){
+				if (event.target == gen_ques_wrapper){
 					gen_ques_modal.style.display = "none";
 					body.style.overflow = "auto";
 				}
@@ -131,6 +156,9 @@
 					gen_ques_modal.style.display = "none";
 					body.style.overflow = "auto";
 				}
+				
+				// Reset styles.
+				removeErrorStyles();
 			}
 		</script>
 		
@@ -151,18 +179,79 @@
 				// Prevent when clicking on submit to default to a submit page.
 				event.preventDefault();
 				
+				// Reset styles.
+				removeErrorStyles();
+				
 				var fname = getInputValue("fname");
 				var lname = getInputValue("lname");
-				var email = getInputValue("email");
+				var email = getInputValue("actual_email");
+				var fake_email = getInputValue("email");
 				var msg = getInputValue("msg");
 				
-				// Save values.
-				saveValues(fname, lname, email, msg);
+				// Validate inputs, then save, Save values.
+				if (isValid(fname, lname, email, fake_email, msg)){
+					saveValues(fname, lname, email, fake_email, msg);
+					
+					// Show the message modal with loading animation.
+					loadingModal();
+				}
+				else{
+					formErrors = document.querySelectorAll("[id^='formError']");
+					
+					for (var i = 0; i < formErrors.length; i++){
+						formErrors[i].style.display = "inline-block";
+					}
+				}
 				
-				// TODO: Handle ERRORS. / VALIDATION.
+			}
+			
+			// Function removes all error styles.
+			function removeErrorStyles(){
+				// Remove that of id=formError, there should be two.
+				formErrors = document.querySelectorAll("[id^='formError']");
 				
-				// Show the message modal with loading animation.
-				loadingModal();
+				for (var i = 0; i < formErrors.length; i++){
+					formErrors[i].style.display = "none";
+				}
+				
+				// Remove name errors.
+				document.getElementById("formNameError").style.display = "none";
+				document.getElementById("formName").style.color = "#1A1A1A";
+				
+				// Remove email errors.
+				document.getElementById("formEmailError").style.display = "none";
+				document.getElementById("formEmail").style.color = "#1A1A1A";
+				
+				// Remove message errors.
+				document.getElementById("formMsgError").style.display = "none";
+				document.getElementById("formMsg").style.color = "#1A1A1A";
+			}
+			
+			// Function validates input values.
+			function isValid(fname, lname, email, fake_email, msg){
+				// Check if input values are empty, display error styles if so.
+				if (fname === "" || lname === ""){
+					document.getElementById("formNameError").style.display = "inline-block";
+					document.getElementById("formName").style.color = "#cc3b3b";
+				}
+				if (email === ""){
+					document.getElementById("formEmailError").style.display = "inline-block";
+					document.getElementById("formEmail").style.color = "#cc3b3b";
+				}
+				if (fake_email !== ""){	// Simply returns false atm.
+				}
+				if (msg === ""){
+					document.getElementById("formMsgError").style.display = "inline-block";
+					document.getElementById("formMsg").style.color = "#cc3b3b";
+				}
+				
+				// If any input values are empty, return false.
+				if (fname === "" || lname === "" || email === "" || fake_email !== "" || msg === ""){
+					return false;
+				}
+				else{
+					return true;
+				}
 			}
 			
 			// Function to get form input values.
@@ -171,7 +260,7 @@
 			}
 			
 			// Functions saves the values to firebase.
-			function saveValues(fname, lname, email, msg){
+			function saveValues(fname, lname, email, fake_email, msg){
 				// Get date.
 				var date = getDate();
 				// Get time.
@@ -184,11 +273,12 @@
 					first_name: fname,
 					last_name: lname,
 					email: email,
+					fake_email: fake_email,
 					message: msg,
 					time_uploaded: timestamp
 				})
 				.then(function(){
-					// Set doesn't return a docRef.
+					// Set function doesn't return a docRef.
 					//console.log("Document written with ID: ", docRef.);
 					
 					// Clear form.
@@ -255,6 +345,9 @@
 				var m = today.getMinutes();
 				var s = today.getSeconds();
 				
+				if (h < 10){
+					h = '0' + h;
+				}
 				if (m < 10){
 					m = '0' + m;
 				}

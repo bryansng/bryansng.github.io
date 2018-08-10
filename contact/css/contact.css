@@ -69,7 +69,7 @@
 
 
 .chats{
-	padding: 15vh 5vw;
+	padding: 7.5vw 5vw;
 	
 	display: flex;
 	flex-direction: row;
@@ -100,12 +100,12 @@
 	transition-delay: 0s;
 }
 .chat .category{
-	padding-bottom: 4vh;
+	padding-bottom: 2vw;
 	
 	font-size: 4.5vw;
 }
 .chat .desc{
-	padding-bottom: 5vh;
+	padding-bottom: 2.5vw;
 	
 	line-height: 2.25vw;
 	
@@ -141,7 +141,7 @@
 	position: fixed;	/* Stay in place */
 	
 	width: 100%;	/* Full width */
-	height: 100%;	/* Full height */
+	height: 100vh;	/* Full height */
 	
 	overflow: auto;	/* Enable scroll if needed */
 	
@@ -152,13 +152,15 @@
 	
 	z-index: 1;	/* Sit on top */
 }
-.gen_ques_modal_content{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.gen_ques_modal_wrapper{
+	display: flex;
 	
-	padding: 6vh 3vw;
+	justify-content: center;
+	align-items: center;
+}
+.gen_ques_modal_content{
+	margin: 0.5vw auto;
+	padding: 3vw;
 	
 	width: 55%;	/* Could be more or less, depending on screen size. */
 	
@@ -169,7 +171,7 @@
 
 
 .gen_ques_modal_content .top{
-	padding-bottom: 8vh;
+	padding-bottom: 4vw;
 	
 	display: flex;
 	flex-direction: row;
@@ -209,19 +211,19 @@
 	display: inline-block;
 }
 .middle h3, .middle h4, .middle label{
-	padding-bottom: 1.5vh;
+	padding-bottom: 0.75vw;
 }
 .middle h3, .middle label{
 	font-size: 1.2vw;
 }
 .middle input, .middle textarea{
-	margin-bottom: 5vh;
+	margin-bottom: 2.25vw;
 }
 .inner_column input{
 	margin-bottom: initial;
 }
 .middle h4{
-	font-size: 1.75vh;
+	font-size: 0.85vw;
 	opacity: 0.75;
 }
 
@@ -237,7 +239,7 @@
 .inner_column{
 	width: 49%;
 	
-	margin-bottom: 5vh;
+	margin-bottom: 1.5vw;
 	
 	display: flex;
 	flex-direction: column;
@@ -263,14 +265,13 @@ input:focus, textarea:focus{
 	outline: none;
 	background-color: white;
 }
-/*border-color: #cc3b3b;*/
 .inner_column input{
-	margin-bottom: 0vh;
+	margin-bottom: 0;
 }
 .inner_column label{
-	margin-top: 1.25vh;
+	margin-top: 0.625vw;
 	
-	font-size: 2vh;
+	font-size: 1vw;
 }
 
 .bottom{
@@ -289,7 +290,7 @@ input:focus, textarea:focus{
 	width: initial;
 	line-height: initial;
 	
-	padding: 2.25vh 2.5vw;
+	padding: 1vw 2.5vw;
 	
 	border: none;
 	
@@ -302,6 +303,26 @@ input:focus, textarea:focus{
 	cursor: pointer;
 	
 	outline: none;
+}
+
+#formError, #formNameError, #formEmailError, #formMsgError{
+	display: inline-block;
+	display: none;
+	
+	padding: 0.5vw 0.75vw;
+	margin-bottom: 0.5vw;
+	background-color: #cc3b3b;
+	
+	color: #fff;
+	font-size: 0.9vw;
+}
+#formError:before, #formNameError:before, #formEmailError:before, #formMsgError:before{
+	content: "x";
+	padding-right: 0.5vw;
+	font-weight: bolder;
+}
+#formError{
+	margin: 1vw 0;
 }
 
 
@@ -433,27 +454,30 @@ input:focus, textarea:focus{
 		border-width: 0.5vw;
 	}
 	.chat .category{
-		padding-bottom: 4vh;
+		padding-bottom: 7vw;
 		font-size: 12vw;
 	}
 	.chat .desc{
-		padding-bottom: 4vh;
+		padding-bottom: 7vw;
 		line-height: 1.5em;
 		font-size: 4.5vw
 	}
 	.chat .action{
-		border-bottom-width: 0.1vh;
+		border-bottom-width: 0.3vw;
 		font-size: 5vw;
 	}
 	
+	.gen_ques_modal{
+		background-color: white;
+	}
 	.gen_ques_modal_content{
-		padding: 5vh 9vw;
+		padding: 9vw;
+		margin: 1.5vw auto;	/* Remove the default styling from above. */
 		
 		width: 100%;
-		height: 100vh;
 	}
 	.gen_ques_modal_content .top{
-		padding-bottom: 6vh;
+		padding-bottom: 10vw;
 	}
 	.top h2{
 		word-spacing: 0.25vw;
@@ -468,23 +492,23 @@ input:focus, textarea:focus{
 
 
 	.middle h3, .middle h4, .middle label{
-		padding-bottom: 1.5vh;
+		padding-bottom: 2.6vw;
 	}
 	.middle h3, .middle label{
 		font-size: 4.2vw;
 	}
 	.middle input, .middle textarea{
-		margin-bottom: 5vh;
+		margin-bottom: 9vw;
 	}
 	.middle h4{
-		font-size: 1.75vh;
+		font-size: 3.1vw;
 		opacity: 0.75;
 	}
 
 	.inner_column{
 		width: 49%;
 		
-		margin-bottom: 5vh;
+		margin-bottom: 9vw;
 	}
 	.inner_column input, .middle input, .middle textarea{
 		padding: 3.7vw;
@@ -492,19 +516,32 @@ input:focus, textarea:focus{
 		font-size: 4vw;
 	}
 	.inner_column input{
-		margin-bottom: 0vh;
+		margin-bottom: 0;
 	}
 	.inner_column label{
-		margin-top: 1.25vh;
+		margin-top: 2vw;
 		
-		font-size: 2vh;
+		font-size: 3.6vw;
 	}
 
 	.bottom .send_msg{
-		padding: 2.25vh 12vw;
+		padding: 4vw 12vw;
 		
 		font-size: 4.5vw;
 	}
+	
+	#formError, #formNameError, #formEmailError, #formMsgError{
+		padding: 1.5vw 2vw;
+		margin-bottom: 2vw;
+		font-size: 3.2vw;
+	}
+	#formError:before, #formNameError:before, #formEmailError:before, #formMsgError:before{
+		padding-right: 1.5vw;
+	}
+	#formError{
+		margin: 2vw 0;
+	}
+	
 	.gen_ques_success_content{
 		padding: 6vw;
 		
@@ -557,16 +594,16 @@ input:focus, textarea:focus{
 		border-width: 0.4vw;
 	}
 	.chat .category{
-		padding-bottom: 6vh;
+		padding-bottom: 3.5vw;
 		font-size: 8vw;
 	}
 	.chat .desc{
-		padding-bottom: 14vh;
+		padding-bottom: 8vw;
 		line-height: 1.5em;
 		font-size: 3vw;
 	}
 	.chat .action{
-		border-bottom-width: 0.1vh;
+		border-bottom-width: 0.1vw;
 		font-size: 2.8vw;
 	}
 	
@@ -574,7 +611,7 @@ input:focus, textarea:focus{
 		background-color: white;
 	}
 	.gen_ques_modal_content{
-		padding: 5vh 9vw;
+		padding: 2.9vw 9vw;
 		
 		width: 100%;
 		height: 100%;
@@ -582,7 +619,7 @@ input:focus, textarea:focus{
 		background-color: transparent;
 	}
 	.gen_ques_modal_content .top{
-		padding-bottom: 6vh;
+		padding-bottom: 3.3vw;
 	}
 	.top h2{
 		word-spacing: 0.25vw;
@@ -599,13 +636,13 @@ input:focus, textarea:focus{
 		padding-bottom: 2vw;
 	}
 	.middle h3, .middle h4, .middle label{
-		padding-bottom: 2vh;
+		padding-bottom: 1.1vw;
 	}
 	.middle h3, .middle label{
 		font-size: 2.6vw;
 	}
 	.middle input, .middle textarea{
-		margin-bottom: 5vh;
+		margin-bottom: 2.9vw;
 	}
 	.middle h4{
 		font-size: 2vw;
@@ -615,7 +652,7 @@ input:focus, textarea:focus{
 	.inner_column{
 		width: 49%;
 		
-		margin-bottom: 5vh;
+		margin-bottom: 2.9vw;
 	}
 	.inner_column input, .middle input, .middle textarea{
 		padding: 2vw;
@@ -623,10 +660,10 @@ input:focus, textarea:focus{
 		font-size: 2.7vw;
 	}
 	.inner_column input{
-		margin-bottom: 0vh;
+		margin-bottom: 0;
 	}
 	.inner_column label{
-		margin-top: 1.25vh;
+		margin-top: 0.65vw;
 		
 		font-size: 2vw;
 	}
@@ -636,6 +673,19 @@ input:focus, textarea:focus{
 		
 		font-size: 2.5vw;
 	}
+	
+	#formError, #formNameError, #formEmailError, #formMsgError{
+		padding: 1.1vw 1.6vw;
+		margin-bottom: 1.5vw;
+		font-size: 2.1vw;
+	}
+	#formError:before, #formNameError:before, #formEmailError:before, #formMsgError:before{
+		padding-right: 1.1vw;
+	}
+	#formError{
+		margin: 1.5vw 0;
+	}
+	
 	.gen_ques_success_content{
 		padding: 6vw;
 		
