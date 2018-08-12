@@ -92,9 +92,19 @@
 	background-color: #EEEEEE;
 	
 	cursor: pointer;
+	
+	box-shadow: 0.1vw 0.15vw 1.02vw 0.15vw #DDD;
 }
 .gallery_img{
-	box-shadow: 0.1vw 0.15vw 1.02vw 0.15vw #DDD;
+	opacity: 1;
+	
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.3s;
+	transition-delay: 0s;
+}
+.gallery_img[data-src]{
+	opacity: 0;
 }
 .preload_img{
 	margin: 0.5vw;
