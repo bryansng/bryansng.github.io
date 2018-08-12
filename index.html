@@ -12,45 +12,46 @@
 	</head>
 	
 	<body>
-		{% include header.html %}
-	
-		<div class="bg_img"></div>
-		<div class="content_container">
-			<div class="name_container">
-				<h1>
-					<span class="name_bold">B</span>ryan
-					<span class="name_bold">S</span>ng
-				</h1>
+		<div class="bg_img">
+			{% include header.html %}
+			
+			<div class="content_container">
+				<div class="name_container">
+					<h1>
+						<span class="name_bold">B</span>ryan
+						<span class="name_bold">S</span>ng
+					</h1>
+				</div>
+				
+				<div class="main_nav_container">
+					<a href="/" class="a_remove_deco">
+						Home
+					</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<a href="projects/" class="a_remove_deco">
+						Projects
+					</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<a href="about/" class="a_remove_deco">
+						About
+					</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<a href="resume/" class="a_remove_deco">
+						Resume
+					</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<a href="photography/" class="a_remove_deco">
+						Photography
+					</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<!--
+					<a href="blog/" class="a_remove_deco">
+						Blog
+					</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					-->
+					<a href="contact/" class="a_remove_deco">
+						Contact
+					</a>
+				</div>
 			</div>
 			
-			<div class="main_nav_container">
-				<a href="/" class="a_remove_deco">
-					Home
-				</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-				<a href="projects/" class="a_remove_deco">
-					Projects
-				</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-				<a href="about/" class="a_remove_deco">
-					About
-				</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-				<a href="resume/" class="a_remove_deco">
-					Resume
-				</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-				<a href="photography/" class="a_remove_deco">
-					Photography
-				</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-				<!--
-				<a href="blog/" class="a_remove_deco">
-					Blog
-				</a><span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-				-->
-				<a href="contact/" class="a_remove_deco">
-					Contact
-				</a>
-			</div>
+			{% include footer.html %}
 		</div>
-		
-		{% include footer.html %}
 	</body>
 	
 </html>

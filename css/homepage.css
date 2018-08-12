@@ -7,6 +7,7 @@ body, html{
 
 .bg_img{
 	position: relative;
+	width: 100%;
 	height: 100vh;
 	
 	/*background-image: url("../img/bg_bright_compressed.JPG");*/
@@ -127,6 +128,9 @@ body, html{
 		width: 100%;
 		
 		position: absolute;
+		top: 0;
+		left: 0;
+		
 		z-index: 2;
 		
 		background-color: transparent;
@@ -156,6 +160,8 @@ body, html{
 	}
 	.copy_container{
 		font-size: 5vw;
+		color: white;
+		opacity: 0.6;
 	}
 }
 
@@ -184,6 +190,8 @@ body, html{
 	/* For Header */
 	.nav_container{
 		width: 100%;
+		top: 0;
+		left: 0;
 		
 		position: absolute;
 		z-index: 2;
@@ -215,6 +223,8 @@ body, html{
 	}
 	.copy_container{
 		font-size: 2.5vw;
+		color: white;
+		opacity: 0.6;
 	}
 }
 /* For small screens in landscape mode. */
@@ -241,6 +251,9 @@ body, html{
 		width: 100%;
 		
 		position: absolute;
+		top: 0;
+		left: 0;
+		
 		z-index: 1;
 		
 		background-color: transparent;
@@ -283,6 +296,10 @@ body, html{
 	}
 	.sm_svg{
 		width: 3vw;
+	}
+	.copy_container{
+		color: white;
+		opacity: 0.6;
 	}
 }
 
