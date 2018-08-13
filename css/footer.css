@@ -79,7 +79,7 @@
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
 	.footer_container{
-		padding: 0.5vw 0;
+		padding: 1vw 0;
 	}
 	
 	.sm_container{
@@ -99,7 +99,7 @@
 /* And for small screens in landscape mode. */
 @media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
 	.footer_container{
-		padding: 0.5vw 0;
+		padding: 0.75vw 0;
 	}
 	
 	.sm_container{
