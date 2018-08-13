@@ -150,15 +150,18 @@
 				if (event.target == gen_ques_wrapper){
 					gen_ques_modal.style.display = "none";
 					body.style.overflow = "auto";
+					
+					// Reset styles.
+					removeErrorStyles();
 				}
 				if (event.target == gen_ques_success_modal){
 					gen_ques_success_modal.style.display = "none";
 					gen_ques_modal.style.display = "none";
 					body.style.overflow = "auto";
+					
+					// Reset styles.
+					removeErrorStyles();
 				}
-				
-				// Reset styles.
-				removeErrorStyles();
 			}
 		</script>
 		
