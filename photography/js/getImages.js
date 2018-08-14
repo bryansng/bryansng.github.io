@@ -41,7 +41,7 @@ db.collection("photography").orderBy("time_uploaded", "asc").get().then((querySn
 				// Insert url into an <img> tag to "download".
 				// Slide.
 				var new_slide_img = document.createElement("img");
-				new_slide_img.src = url;
+				new_slide_img.setAttribute("data-src", url);
 				new_slide_img.classList.add("modal_img");
 				
 				// Gallery_wrapper.
@@ -52,21 +52,20 @@ db.collection("photography").orderBy("time_uploaded", "asc").get().then((querySn
 				
 				// Adds a class to the image, depending if image is horizontal or vertical.
 				var remote_img = new Image();
-				remote_img.addEventListener("load", function(){
-					console.log(this.naturalWidth + ' ' + this.naturalHeight);
-				});
 				remote_img.src = url;
 				
-				var width = remote_img.naturalWidth;
-				var height = remote_img.naturalHeight;
-				
-				if (width > height){
-					new_wrapper_img.classList.add("horizontal");
-					new_slide_img.classList.add("horizontal");
-				} else if (height > width){
-					new_wrapper_img.classList.add("vertical");
-					new_slide_img.classList.add("vertical");
-				}
+				remote_img.onload = function(){
+					var width = remote_img.naturalWidth;
+					var height = remote_img.naturalHeight;
+					
+					if (width > height){
+						new_wrapper_img.classList.add("horizontal");
+						new_slide_img.classList.add("horizontal");
+					} else if (height > width){
+						new_wrapper_img.classList.add("vertical");
+						new_slide_img.classList.add("vertical");
+					}
+				};
 				
 				new_slide.appendChild(new_slide_img);
 				new_wrapper.appendChild(new_wrapper_img);	// insert img into div.
@@ -82,11 +81,18 @@ db.collection("photography").orderBy("time_uploaded", "asc").get().then((querySn
 		temp_wrapper_parent.style.display = "none";
 		
 		// Lazy-loading, set the src to its data-src after it is done downloading.
+		/*
 		[].forEach.call(document.querySelectorAll(".gallery_img[data-src]"), function(img){
 			img.setAttribute('src', img.getAttribute("data-src"));
 			img.onload = function(){
 				img.removeAttribute("data-src");
 			};
 		});
+		*/
+		
+		getNewElementsHeight();
+		console.log(heights);
+		
+		enableScrollOnMobile();
 	});
 });
