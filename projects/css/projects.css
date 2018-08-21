@@ -104,7 +104,14 @@
 
 
 .content_container{
-	padding: 8vw 1.5vw;
+	padding: 0.5vw 1.5vw;
+}
+
+.programming_projects{
+	padding: 8vw 0;
+}
+.other_projects{
+	padding: 8vw 0;
 }
 
 .header_container{
@@ -292,14 +299,22 @@
 	}
 	
 	.content_container{
-		padding-top: 15vw;
-		padding-bottom: 15vw;
+		padding-top: 5vw;
+		padding-bottom: 5vw;
 	}
+	.programming_projects, .other_projects{
+		padding: 15vw 0;
+	}
+	
 	.header_container{
 		padding-bottom: 5vw;
 	}
 	.header_container h2{
 		font-size: 6vw;
+	}
+	
+	hr{
+		margin: 0 5vw;
 	}
 	
 	.project{
@@ -376,14 +391,22 @@
 	}
 	
 	.content_container{
-		padding-top: 12vw;
-		padding-bottom: 12vw;
+		padding-top: 3vw;
+		padding-bottom: 3vw;
 	}
+	.programming_projects, .other_projects{
+		padding: 12vw 0;
+	}
+	
 	.header_container{
 		padding-bottom: 3vw;
 	}
 	.header_container h2{
 		font-size: 3vw;
+	}
+	
+	hr{
+		margin: 0 3vw;
 	}
 	
 	.project{
@@ -424,7 +447,7 @@
 		
 		padding: 1.25vw 2.75vw;
 		
-		border-width: 0.5vw;
+		border-width: 0.25vw;
 		
 		font-size: 2vw;
 	}
@@ -451,6 +474,10 @@
 
 /* Large devices (laptops/desktops, 1280px and up) */
 @media only screen and (min-width: 1280px){
+	hr{
+		margin: 0 2.5vw;
+	}
+	
 	.project_desc h5{
 		top: -0.34vw;
 	}

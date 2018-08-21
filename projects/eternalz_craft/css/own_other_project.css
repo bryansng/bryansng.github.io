@@ -1,0 +1,283 @@
+.content_container{
+	padding: 8vw 5vw;
+	
+	font-size: 1.5vw;
+	font-family: 'Montserrat', sans-serif;
+	color: #1A1A1A;
+}
+
+.start h3{
+	font-size: 1.5vw;
+	padding-bottom: 2vh;
+}
+.start h3:after{
+	content: ":";
+}
+.start ol{
+	list-style-position: inside;
+	list-style-type: decimal;
+	padding-bottom: 5vh;
+}
+.start ol li{
+	font-size: 1.5vw;
+	padding-bottom: 2vh;
+}
+.start ol li:last-child{
+	padding-bottom: 0;
+}
+
+
+/* Timeline (vertical ruler) */
+.timeline{
+	width: 100%;
+	
+	margin: 5vh 0;
+	padding: 10vh 0;
+	
+	background-color: #EEEEEE;
+	
+	position: relative;
+}
+.timeline:after{
+	content: "";
+	
+	width: 6px;
+	position: absolute;
+	
+	margin-left: -3px;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	
+	background-color: white;
+}
+
+/* Container around content */
+.container{
+	width: 50%;
+	padding: 10px 40px;
+	
+	position: relative;
+	
+	background-color: inherit;
+}
+/* The circles on the timeline */
+.container::after{
+	content: "";
+	
+	width: 25px;
+	height: 25px;
+	
+	position: absolute;
+	
+	top: 15px;
+	right: -17px;
+	background-color: white;
+	
+	border-width: 4px;
+	border-style: solid;
+	/*border-color: #FF9F55;*/
+	border-color: gray;
+	border-radius: 50%;
+	
+	z-index: 1;
+}
+
+/* Place the container to the left */
+.left{
+	left: 0;
+}
+
+/* Place the container to the right */
+.right{
+	left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before{
+	content: " ";
+	
+	width: 0;
+	height: 0;
+	
+	position: absolute;
+	
+	top: 22px;
+	right: 30px;
+	
+	border-width: medium;
+	border-style: solid;
+	border-color: white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+	
+	z-index: 1;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before{
+	content: " ";
+	
+	width: 0;
+	height: 0;
+	
+	position: absolute;
+	
+	top: 22px;
+	left: 30px;
+	
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+	
+	z-index: 1;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after{
+	left: -16px;
+}
+
+/* The actual content */
+.content{
+	padding: 20px 30px;
+	
+	position: relative;
+	
+	background-color: white;
+	
+	border-radius: 6px;
+}
+/* The date */
+.content h2{
+	color: gray;
+}
+/* The sentence */
+.content h3{
+	line-height: 1.1em;
+}
+.content h2, .content h3{
+	padding-bottom: 0.5vw;
+}
+.content img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+	.content_container{
+		padding: 8vw 4vw;
+		
+		font-size: 5vw;
+	}
+
+	.start h3{
+		font-size: 5.5vw;
+		padding-bottom: 2vh;
+	}
+	.start ol{
+		padding-bottom: 5vh;
+	}
+	.start ol li{
+		font-size: 5vw;
+		padding-bottom: 2vh;
+	}
+	
+	/* Place the timeline to the left */
+	.timeline::after{
+		left: 31px;
+	}
+	/* Full-width containers */
+	.container{
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+	/* Make sure that all arrows are pointing leftwards */
+	.container::before{
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+	/* Make sure all circles are at the same spot */
+	.left::after, .right::after{
+		left: 15px;
+	}
+	/* Make all right contaienrs behave like the left ones */
+	.right{
+		left: 0%;
+	}
+	
+	/* The actual content */
+	.content{
+		padding: 4vw 6vw;
+		
+		border-radius: 6px;
+	}
+	/* The sentence */
+	.content h3{
+		line-height: 1.1em;
+	}
+	.content h2, .content h3{
+		font-size: 4.5vw;
+		padding-bottom: 2vw;
+	}
+}
+
+/* Medium devices (landscape tablets, portrait tablets and large phones, between 600px and 1280px) */
+/* And for small screens in landscape mode. */
+@media only screen and (min-width: 600px) and (max-width: 1280px), screen and (max-width: 600px) and (orientation: landscape){
+	.content_container{
+		padding: 8vw 4vw;
+		
+		font-size: 5vw;
+	}
+
+	.start h3{
+		font-size: 3.25vw;
+		padding-bottom: 4vh;
+	}
+	.start ol{
+		padding-bottom: 10vh;
+	}
+	.start ol li{
+		font-size: 3vw;
+		padding-bottom: 4vh;
+	}
+	
+	/* The actual content */
+	.content{
+		padding: 3vw 4vw;
+		
+		border-radius: 6px;
+	}
+	/* The sentence */
+	.content h3{
+		line-height: 1.25em;
+	}
+	.content h2, .content h3{
+		font-size: 3vw;
+		padding-bottom: 1vw;
+	}
+}
+/* Just Medium Devices. */
+@media only screen and (min-width: 600px) and (max-width: 1280px){
+	#projects{
+		border-bottom-color: black;
+	}
+}
+/* In Ipad or larger mobile screens in landscape, the intro img takes the height of the device. */
+@media only screen and (min-width: 600px) and (max-width: 1280px) and (orientation: landscape){
+}
+
+/* Large devices (laptops/desktops, 1280px and up) */
+@media only screen and (min-width: 1280px){
+}
