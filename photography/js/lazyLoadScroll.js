@@ -99,11 +99,11 @@ function vw(v){
 // Run on successive resizing.
 window.addEventListener("resize", function(){
 	if (window.matchMedia("(orientation: landscape)").matches){
-		console.log("Landscape");
+		//console.log("Landscape");
 		handleLazyLoadOnResize();
 	}
 	else if (window.matchMedia("(orientation: portrait)").matches){
-		console.log("Portrait");
+		//console.log("Portrait");
 		handleLazyLoadOnResize();
 	}
 });

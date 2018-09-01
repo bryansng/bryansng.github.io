@@ -91,7 +91,6 @@ db.collection("photography").orderBy("time_uploaded", "asc").get().then((querySn
 		*/
 		
 		getNewElementsHeight();
-		console.log(heights);
 		
 		enableScrollOnMobile();
 	});
