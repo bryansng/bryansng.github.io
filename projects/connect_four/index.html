@@ -1,0 +1,72 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		{% include global_resources.html %}
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../shared_css/programming_projects.css"/>
+		<link rel="stylesheet" type="text/css" href="css/own_programming_project.css"/>
+		
+		<title>Connect Four</title>
+	</head>
+	
+	<body>
+		{% include header.html %}
+		
+		<!-- Above the Fold -->
+		<div class="intro_container">
+			<div class="intro_content">
+				<h1>Connect Four</h1>
+				<h2>Connect Four, a connection game for 2 players, played on a seven-column, six-row vertically suspended grid. Players take turns dropping discs, occupying the lowest available space within the column, with the objective to form a horizontal, vertical, or diagonal line of four of one's own discs.</h2>
+			</div>
+		</div>
+		
+		<div class="img_wrapper">
+			<img src="img/connect4_1.png" class="intro_img"/>
+		</div>
+		
+		<div class="content_container">
+			<div class="start">
+				<h3>Task - Implement the game logic</h3>
+			</div>
+			<div class="middle">
+				<ol>
+					<li>Start Condition - Gather player inputs and implement the board.</li>
+					<img src="img/A.1.png"/>
+					
+					<li>Managing turns - Player that represents the yellow disc starts the game.
+						<ol>
+							<li>Asking the player where s/he wants to insert s/he disc</li>
+							<img src="img/A.2.1.png"/>
+							
+							<li>Discs Insertion</li>
+							<img src="img/A.2.2.png"/>
+							
+							<li>Error Handling</li>
+							<img src="img/A.2.3.png"/>
+						</ol>
+					</li>
+					
+					<li>Printing Final Results</li>
+					<img src="img/A.3.png"/>
+				</ol>
+			</div>
+			<div class="end">
+				<h3>Fun Facts</h3>
+				<ul>
+					<li>
+						<a href="https://github.com/bryansng/connect_four" class="a_remove_deco" target="_blank">
+							<i class="fa fa-github fa-lg"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		{% include footer.html %}
+	</body>
+	
+</html>
