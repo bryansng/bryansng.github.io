@@ -2,7 +2,7 @@
 
 A personal website, aimed to facilitate the function of a resume or CV, with ease of contact and further elaboration of work.
 
-![Alt text](./readme-resources/img/personal_web_1.png "Preview")
+![Alt text](./readme-resources/img/overview.png "Preview")
 
 &nbsp;
 ## Characteristics
